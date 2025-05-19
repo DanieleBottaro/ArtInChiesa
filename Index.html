@@ -1,346 +1,63 @@
 <!DOCTYPE html>
 <html>
 	<head>
-	<title>Home Sito</title>
+	<title>Home</title>
+
+	<link rel="icon" type="image/x-icon" href="Immagini opere e icone\Icone e logo\Logo-Sito-favicon.png">
+
+	<link rel="stylesheet" href="CSS/Tentativo-CSS-unico.css"/>
+	
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=search" />
-	<style>
-		* {
-			margin: 0;
-			padding: 0;
-			box-sizing: border-box;
-			font-family: "Poppins", sans-serif;
-		}
 
-		html { 
-			margin: 0; 
-			height: 100%;
-			scroll-behavior: smooth;
-		}
-
-		body{
-			background-color: #E4DBBE;      
-		}
-
-		.header{
-			top:0;
-			left: 0;
-			width: 100%;        
-			background-color: black;
-			display: flex;
-			justify-content: space-between;
-			align-items: center;
-		}
-
-		/*.logo{
-		font-size: 32px;
-		color: white;
-		text-decoration: none;
-		font-weight: 700;
-		}*/
-
-		.logo img{
-			width: 55px;
-			padding: 2px;
-		}
-
-		.navbar{
-			padding: 20px 30px;
-		}
-
-		.navbar a {
-			position: relative;
-			font-size: 18px;
-			color: white;
-			font-weight: 500;
-			text-decoration: none;
-			margin-left: 40px;
-		}
-
-		.navbar a::before{
-			content: '';
-			position: absolute;
-			top: 100%;
-			left: 0;
-			width: 0;
-			height: 2px;
-			background: #9e3a26;
-			transition: .3s;
-		}
-
-		.navbar a:hover::before{
-			width: 100%;
-		}
-
-		.navbar a:hover{
-			color: #9e3a26;
-		}
-
-		.hero{
-			box-sizing: border-box;
-			background: url(https://www.travelemiliaromagna.it/wp-content/uploads/2021/06/bo2016bolognapiazza_santo_stefanow13467vanni_lazzari-scaled.jpg);
-			background-size: cover;
-			height: 89vh;
-		}
-
-		.layer {
-			background-color: #9e3a26af;
-			height: 100%;
-		}
-
-		.hero h1 {
-			font-size: 45px;
-			text-shadow: 2px 2px 4px rgba(247, 247, 247, 0.7);
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			transform: translate(-50%, -50%);
-			text-align: center;
-			padding: 20px;
-		}
-
-		.wrapSotto{
-			height: 7vh;
-		}
-
-		#scendiGiu{
-			position: relative;
-			left: 48%;
-			width: 40px;
-			height: 40px;
-			transition: transform 2s ease-in-out;
-		}
-
-		.search{
-			--padding: 14px;
-
-			width: max-content;
-			display: flex;
-			align-items: center;
-			padding: var(--padding);
-			border-radius: 24px;
-			background: #f6f6f6;
-			transition: box-shadow 0.5s;
-			position: absolute;
-			top: 70%;
-			left: 50%;
-			transform: translate(-50%, -50%);
-		}
-
-		.search-input{
-			font-size: 14px;
-			font-family: Arial, Helvetica, sans-serif;
-			color: #333333;
-			margin-left: var(--padding);
-			outline: none;
-			border: none;
-			background: transparent;
-			width: 400px;
-		}
-
-		.search:focus-within{
-			box-shadow: 0 0 2px rgba(0, 0, 0, 0.75);
-		}
-
-		.search-input::placeholder,
-		.search-icon{
-			color: rgba(0, 0, 0, 0.5)
-		}
-
-		.text h2{
-			padding-bottom: 15px;
-		}
-
-		.text{
-			text-align: justify;
-			line-height: 1.4;
-		}
-
-		.text-left{
-			margin-left: 50px;
-			width: 33%;
-		}
-
-		.text-right{
-			width: 33%;
-			float: right;
-			margin: 50px 50px 100px 0px;
-		}
-
-		.register-button{
-			text-align: center;
-			cursor: pointer;
-			color:white;
-			margin-top: 20px;
-			width: 200px;
-			padding: 15px;
-			border: 2px black solid;
-			background-color: #000000;
-		}
-
-		.register-button:hover{
-			background-color: #9e3a26;
-		}
-
-		.box-esplora, .box-esplora-periodi{
-			clear: both;
-			height: auto;
-			width: 100%;
-			padding: 30px 0px;
-		}
-
-		.box-esplora{
-			clear: both;
-			background-color: #9e3a26;
-		}
-
-		.box-esplora-periodi{
-			background-color: #000000;
-
-		}
-
-		.esplora-title{
-			color: #E4DBBE;
-			margin-bottom: 40px;
-		}
-
-		.row-periodi {
-			width: 80%;
-			margin: auto;
-		}
-
-		.row-periodi{
-			margin-bottom: 30px;
-			text-align: center;
-		}
-
-		.immagini-row {
-			display: flex;
-			justify-content: center;
-			gap: 20px;
-			padding: 20px 0px;
-		}
-
-		.img-container {
-			position: relative;
-			width: 30%;
-			height: 300px;
-			overflow: hidden;
-			transition: box-shadow 0.3s ease-in-out;
-		}
-
-		.img-container:hover {
-			box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.6);
-			background-color: black;
-		}
-
-		.img-container img {
-			width: 100%;
-			height: 100%;
-			object-fit: cover;
-			display: block;
-		}
-
-		.secolo {
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			background-color: rgba(0, 0, 0, 0.4); /* inizialmente leggero */
-			color: white;
-			display: flex;
-			align-items: center;  /* centro verticale */
-			justify-content: center;  /* centro orizzontale */
-			transition: background-color 0.3s ease-in-out;
-		}
-
-		.secolo p {
-			margin: 0;
-			font-size: 30px;
-		}
-
-		.img-container:hover .secolo {
-			background-color: rgba(0, 0, 0, 0.7); /* overlay più scuro */
-		}
-
-		/*CODICE FOOTER*/
-		.footer {
-			position: relative;
-			height: 100%;
-			width: 100%;
-			padding: 30px;
-			text-align: left;
-			background-color: black;
-			color: white;
-			border: black solid 1px;
-		}
-
-		.footer p{
-			padding: 20px;
-		}
-
-		.footer a{
-			color: white;
-			text-decoration: none;
-			transition: text-decoration 3s ease;
-		}
-
-		.footer-links a:hover{
-			text-decoration: underline;
-			text-decoration-color: #E4DBBE;
-			text-decoration-thickness: 15%;
-			text-underline-offset: 5px;
-		}
-
-		.footer-links{
-			padding: 30px;
-			display: flex;
-			justify-content: center;
-		}
-
-		.clickable-container{
-			width: fit-content;
-			background-color: #9e3a26;
-			border: 2px solid #9e3a26;
-			color:#E4DBBE;
-			border-radius: 10px;
-			padding: 8px;
-			margin-top: 5px;
-			cursor: pointer;
-		}
-
-		.clickable-container:hover{
-			background-color: white;
-			color:#9e3a26;
-		}
-
-		.go-back-up{
-			position: absolute;
-			right: 0px;
-			bottom: 10px;
-		}
-
-
-	</style>
 	</head>
 
 	<body>
 
 		<header class="header" id="top-page">
 
-			<a href="#" class="logo"><img src="D:\Desktop\CODICE SITO 13 05\Immagini opere e icone\Icone e logo\Logo-SitusProva.png"></a>		
+			<a href="#" class="logo"><img src="Immagini opere e icone\Icone e logo\Logo-sito.png"></a>
 
 			<nav class="navbar">
-				<a href="C:\Users\Admin\Desktop\Esercizi IU\searchbar.html">Home</a>
-				<a href="C:\Users\picot\OneDrive\Desktop\Codice sito\SITO PROGETTO UNI\MappaSitoImmobiliare.html">Le chiese</a>
-				<a href="C:\Users\picot\OneDrive\Desktop\Codice sito\Esercizi IU\Tentativo-Item.html">Catalogo opere</a>
-				<a href="C:\Users\picot\OneDrive\Desktop\Codice sito\Esercizi IU\PaginaItem.html">Pagina Item</a>
-				<a href="#">Login</a>
+				<div class="navbar-left">
+					<a href="Index.html">Home</a>
+					<a href="MappaSitoImmobiliare.html">Mappa delle chiese</a>
+
+					<div class="dropdown">
+
+						<button class="dropbtn"><a class="droplink" href="#">Percorsi tematici</a></button>
+						<img src="Immagini opere e icone\Icone e logo\arrow_drop_down.svg">
+
+						<div class="dropdown-content">
+						  <a href="#">Gli spazi liturgici e le loro funzionalità</a>
+						  <a href="Percorso-tematico.html">Occhio al dettaglio: punzoni, graniture e stiletto</a>
+						</div>
+					</div>
+					
+					<a href="#">Catalogo opere</a>
+				</div>  
+				<div class="navbar-right">
+					<a href="PaginaItem.html">Pagina Item</a>
+					<a href="#" id="contatti">Contatti</a>
+					<div class="dropdown">
+
+						<button class="dropbtn"><a class="droplink" href="#">IT</a></button>
+						<img src="Immagini opere e icone\Icone e logo\arrow_drop_down.svg">
+
+						<div class="dropdown-content">
+						  <a href="#">EN</a>
+						  <a href="#" style="color: #9e3a26">IT</a>
+						</div>
+					</div>
+					<a href="#"><img src="Immagini opere e icone\Icone e logo\Accesso-symbol.svg" style="margin-right: 3px;">Accedi</a>
+					
+					
+				</div>
 			</nav>
 
 		</header>
 
 		<div class="hero">
+
 			<div class="layer"></div>
 
 			<h1>Esplora le opere custodite <br> all'interno delle chiese di Bologna</h1>
@@ -354,7 +71,7 @@
 		</div>
 
 		<div class="wrapSotto">
-			<a href="#vaiSotto"><img src="D:\Desktop\CODICE SITO 13 05\Immagini opere e icone\Icone e logo\FrecciaGiu.png" id="scendiGiu"></a>
+			<a href="#vaiSotto"><img src="Immagini opere e icone\Icone e logo\FrecciaGiu.png" id="scendiGiu"></a>
 		</div>
 
 		<div class="text text-left">
@@ -376,15 +93,15 @@
 
 				<div class="immagini-row">
 					<div class="img-container">
-						<img src="D:\Desktop\CODICE SITO 13 05\Immagini opere e icone\CroceGiunta.JPG" />
+						<img src="Immagini opere e icone\Particolare-Arca-Domenico.JPG" />
 						<a href="#"><div class="secolo"><p>XIII SECOLO</p></div></a>
 					</div>
 					<div class="img-container">
-						<a href="#"><img src="D:\Desktop\CODICE SITO 13 05\Immagini opere e icone\CroceGiunta.JPG" /></a>
+						<a href="#"><img src="Immagini opere e icone\Deposizione-MaestroTedescoXIVXV.JPG" /></a>
 						<a href="#"><div class="secolo"><p>XIV SECOLO</p></div></a>
 					</div>
 					<div class="img-container">
-						<a href="#"><img src="D:\Desktop\CODICE SITO 13 05\Immagini opere e icone\CroceGiunta.JPG" /></a>
+						<a href="#"><img src="Immagini opere e icone\SanGiovanniBattista-XVsecolo.JPG" /></a>
 						<a href="#"><div class="secolo"><p>XV SECOLO</p></div></a>
 					</div>
 				</div>
@@ -397,38 +114,38 @@
 
 				<div class="immagini-row">
 					<div class="img-container">
-						<img src="D:\Desktop\CODICE SITO 13 05\Immagini opere e icone\CroceGiunta.JPG" />
+						<img src="Immagini opere e icone\Maesta-Cimabue.JPG" />
 						<a href="#"><div class="secolo"><p>PALA D'ALTARE</p></div></a>
 					</div>
 					<div class="img-container">
-						<a href="#"><img src="D:\Desktop\CODICE SITO 13 05\Immagini opere e icone\CroceGiunta.JPG" /></a>
+						<a href="#"><img src="Immagini opere e icone\Crocifisso-SimoneDiFilippo.JPG" /></a>
 						<a href="#"><div class="secolo"><p>CROCE DIPINTA</p></div></a>
 					</div>
 					<div class="img-container">
-						<a href="#"><img src="D:\Desktop\CODICE SITO 13 05\Immagini opere e icone\CroceGiunta.JPG" /></a>
-						<a href="#"><div class="secolo"><p>PALIOTTO</p></div></a>
+						<a href="#"><img src="Immagini opere e icone\MadonnaDelParadiso-MicheleDiMatteo.JPG" /></a>
+						<a href="#"><div class="secolo"><p>AFFRESCO STACCATO</p></div></a>
 					</div>
 					<div class="img-container">
-						<a href="#"><img src="D:\Desktop\CODICE SITO 13 05\Immagini opere e icone\CroceGiunta.JPG" /></a>
+						<a href="#"><img src="Immagini opere e icone\Monumento-TaddeoPepoli.JPG" /></a>
 						<a href="#"><div class="secolo"><p>MONUMENTO FUNEBRE</p></div></a>
 					</div>
 				</div>
 				<div class="immagini-row">
 					<div class="img-container">
-						<img src="D:\Desktop\CODICE SITO 13 05\Immagini opere e icone\CroceGiunta.JPG" />
+						<img src="Immagini opere e icone\Santo-diacono-maestro-campionese.JPG" />
 						<a href="#"><div class="secolo"><p>SCULTURA</p></div></a>
 					</div>
 					<div class="img-container">
-						<a href="#"><img src="D:\Desktop\CODICE SITO 13 05\Immagini opere e icone\CroceGiunta.JPG" /></a>
-						<a href="#"><div class="secolo"><p>PULPITO</p></div></a>
+						<a href="#"><img src="Immagini opere e icone\MadonnaDellaSalveRegina.JPG" /></a>
+						<a href="#"><div class="secolo"><p>ICONA</p></div></a>
 					</div>
 					<div class="img-container">
-						<a href="#"><img src="D:\Desktop\CODICE SITO 13 05\Immagini opere e icone\CroceGiunta.JPG" /></a>
+						<a href="#"><img src="Immagini opere e icone\Reliquiario-di-SanPetronio.JPG"/></a>
 						<a href="#"><div class="secolo"><p>RELIQUIARIO</p></div></a>
 					</div>
 					<div class="img-container">
-						<a href="#"><img src="D:\Desktop\CODICE SITO 13 05\Immagini opere e icone\CroceGiunta.JPG" /></a>
-						<a href="#"><div class="secolo"><p>VETRATA</p></div></a>
+						<a href="#"><img src="Immagini opere e icone\Lippo-Polittico-SMariaDeiServi.JPG" /></a>
+						<a href="#"><div class="secolo"><p>POLITTICO</p></div></a>
 					</div>
 				</div>
 			</div>
