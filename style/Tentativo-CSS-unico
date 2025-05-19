@@ -1,0 +1,2005 @@
+/*CSS PAGINA HOME (INDEX)*/
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Poppins", sans-serif;
+	scroll-behavior: smooth;
+}
+
+body{
+	background-color: #E4DBBE;      
+}
+
+
+/*Inizio codice navbar*/
+
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20px 10px;
+	background-color: black;
+	max-height: 65px;
+}
+
+.navbar-right{
+	padding-right: 30px;
+}
+
+.logo img {
+	width: 50px;
+	height: auto;
+	padding: 2px;
+	display: block;
+}
+
+.navbar {
+	display: flex;
+	justify-content: space-between;
+	flex: 1;
+}
+
+.navbar-left, .navbar-right {
+	display: flex;
+	align-items: center;
+}
+
+.navbar-left a, .navbar-right a {
+	position: relative;
+	font-size: 18px;
+	color: white;
+	font-weight: 500;
+	text-decoration: none;
+	margin-left: 40px;
+}
+
+.navbar a {
+	position: relative;
+	font-size: 18px;
+	color: white;
+	font-weight: 500;
+	text-decoration: none;
+	margin-left: 40px;
+}
+
+.navbar a::before{
+	content: '';
+	position: absolute;
+	top: 100%;
+	left: 0;
+	width: 0;
+	height: 2px;
+	background: #9e3a26;
+	transition: .3s;
+}
+
+.navbar a:hover::before{
+	width: 100%;
+}
+
+.navbar a:hover{
+	color: #9e3a26;
+}
+
+.navbar img{
+	position: relative;
+	top: 3px;
+}
+
+
+.dropdown .dropbtn {
+	border: none;
+	outline: none;
+	color: white;
+	background-color: inherit;
+	font-family: inherit;
+	font-size: inherit;
+}
+
+.dropbtn{
+	padding: 0px;
+}
+
+.dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: black;
+	box-shadow: 0px 8px 10px 3px rgba(0,0,0,0.2);
+	z-index: 1;
+	margin: 1px 0px 0px 30px;
+	padding-top: 15px;
+	border: 2px #E4DBBE solid;
+	border-top: none
+}
+
+.dropdown-content a {
+	float: none;
+	color: white;
+	padding: 12px 16px;
+	display: block;
+	text-align: left;
+	margin-left: 0px;
+}
+
+.dropbtn a:hover {
+	color: #9e3a26;
+}
+
+.dropdown:hover .dropdown-content {
+	display: block;
+}
+
+.dropdown-content a::before{
+	background: none;
+}
+
+.dropdown:hover .droplink{
+	color:#9e3a26;
+}
+
+/*FINE CODICE NAVBAR*/
+
+.hero{
+	box-sizing: border-box;
+	background: url('../Immagini opere e icone/Immagini chiese/Chiesa-Santo-Stefano.jpg');
+	background-size: cover;
+	height: 89vh;
+}
+
+.layer {
+	background-color: #9e3a26af;
+	height: 100%;
+}
+
+.hero h1 {
+	font-size: 45px;
+	text-shadow: 2px 2px 4px rgba(247, 247, 247, 0.7);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+	padding: 20px;
+}
+
+.wrapSotto{
+	height: 7vh;
+}
+
+#scendiGiu{
+	position: relative;
+	left: 48%;
+	width: 40px;
+	height: 40px;
+	transition: transform 2s ease-in-out;
+}
+
+.search{
+	padding: 14px;
+	width: max-content;
+	display: flex;
+	align-items: center;
+	padding: var(--padding);
+	border-radius: 24px;
+	background: #f6f6f6;
+	transition: box-shadow 0.5s;
+	position: absolute;
+	top: 70%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.search-input{
+	font-size: 14px;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #333333;
+	margin-left: 14px;
+	outline: none;
+	border: none;
+	background: transparent;
+	width: 400px;
+}
+
+.search:focus-within{
+	box-shadow: 0 0 2px rgba(0, 0, 0, 0.75);
+}
+
+.search-input::placeholder,
+.search-icon{
+	color: rgba(0, 0, 0, 0.5)
+}
+
+.text h2{
+	padding-bottom: 15px;
+}
+
+.text{
+	text-align: justify;
+	line-height: 1.4;
+}
+
+.text-left{
+	margin-left: 50px;
+	width: 33%;
+}
+
+.text-right{
+	width: 33%;
+	float: right;
+	margin: 50px 50px 100px 0px;
+}
+
+.register-button{
+	text-align: center;
+	cursor: pointer;
+	color:white;
+	margin-top: 20px;
+	width: 200px;
+	padding: 15px;
+	border: 2px black solid;
+	background-color: #000000;
+}
+
+.register-button:hover{
+	background-color: #9e3a26;
+}
+
+.box-esplora, .box-esplora-periodi{
+	clear: both;
+	height: auto;
+	width: 100%;
+	padding: 30px 0px;
+}
+
+.box-esplora{
+	clear: both;
+	background-color: #9e3a26;
+}
+
+.box-esplora-periodi{
+	background-color: #000000;
+
+}
+
+.esplora-title{
+	color: #E4DBBE;
+	margin-bottom: 40px;
+}
+
+.row-periodi {
+	width: 80%;
+	margin: auto;
+}
+
+.row-periodi{
+	margin-bottom: 30px;
+	text-align: center;
+}
+
+.immagini-row {
+	display: flex;
+	justify-content: center;
+	gap: 20px;
+	padding: 20px 0px;
+}
+
+.img-container {
+	position: relative;
+	width: 30%;
+	height: 300px;
+	overflow: hidden;
+	transition: box-shadow 0.3s ease-in-out;
+}
+
+.img-container:hover {
+	box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.6);
+	background-color: black;
+}
+
+.img-container img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	display: block;
+}
+
+.secolo {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.4); /* inizialmente leggero */
+	color: white;
+	display: flex;
+	align-items: center;  /* centro verticale */
+	justify-content: center;  /* centro orizzontale */
+	transition: background-color 0.3s ease-in-out;
+}
+
+.secolo p {
+	margin: 0;
+	font-size: 30px;
+}
+
+.img-container:hover .secolo {
+	background-color: rgba(0, 0, 0, 0.7); /* overlay più scuro */
+}
+
+/*CODICE FOOTER*/
+.footer {
+	position: relative;
+	height: 100%;
+	width: 100%;
+	padding: 30px;
+	text-align: left;
+	background-color: black;
+	color: white;
+	border: black solid 1px;
+}
+
+.footer p{
+	padding: 20px;
+}
+
+.footer a{
+	color: white;
+	text-decoration: none;
+	transition: text-decoration 3s ease;
+}
+
+.footer-links a:hover{
+	text-decoration: underline;
+	text-decoration-color: #E4DBBE;
+	text-decoration-thickness: 15%;
+	text-underline-offset: 5px;
+}
+
+.footer-links{
+	padding: 30px;
+	display: flex;
+	justify-content: center;
+}
+
+.clickable-container{
+	width: fit-content;
+	background-color: #9e3a26;
+	border: 2px solid #9e3a26;
+	color:#E4DBBE;
+	border-radius: 10px;
+	padding: 8px;
+	margin-top: 5px;
+	cursor: pointer;
+}
+
+.clickable-container:hover{
+	background-color: white;
+	color:#9e3a26;
+}
+
+.go-back-up{
+	position: absolute;
+	right: 0px;
+	bottom: 10px;
+}
+
+/*FINE CSS HOME (INDEX)*/
+
+/*CSS PERCORSO TEMATICO*/
+
+/*BREADCRUMBS*/
+
+.breadcrumbs{
+	margin: 15px 0px 15px 15px;
+}
+
+.breadcrumbs p{
+	display: inline;
+}
+
+.breadcrumbs a{
+	text-decoration: none;
+	color:#9e3a26;
+}
+
+.breadcrumbs a:hover{
+	text-decoration: underline;
+}
+
+.crumbs-separator{
+	margin: 0px 5px;
+}
+
+.selected-crumb{
+	color:black;
+}
+
+/*FINE BREADCRUMBS*/
+
+.page-header{
+	padding: 20px 30px 10px;
+	text-align: center;
+}
+
+.hero-img, .churchImg{
+	height: 60vh;
+	background-size: cover;
+	background-position: center 80%;
+	background-attachment: fixed;
+	position: relative;
+}
+
+.hero-img::before, .churchImg::before {
+	content: "";	
+	position: absolute;	
+	inset: 0;	
+	background-color: rgba(0, 0, 0, 0.3);	
+}
+
+.hero-img{
+	background-image: url('../Immagini opere e icone/Sfondo-percorso.jpg');
+}
+
+.paragraph{
+	margin-bottom: 30px;
+	padding-left: 60px;
+	width: 60%;
+	margin: auto;
+	text-align: left;
+}
+
+.paragraph h2{
+	padding-top: 60px;
+	margin-bottom: 20px;
+}
+
+.paragraph p{
+	line-height: 1.5;
+}
+
+figure{
+	margin-bottom: 30px;
+}
+
+.paragrafo-percorso{
+	margin: 30px 0;
+}
+
+.middle-img {
+	display: block;
+	width: 50%;
+	margin: 0 auto;
+}
+
+.paragraph img{
+	cursor: pointer;
+}
+
+.image-figure figcaption {
+	width: 50%;
+	text-align: left;
+}
+
+.image-figure p{
+	margin-top: 10px;
+}
+
+figcaption img{
+	height: 15px;
+	margin-left: 5px;
+}
+
+figcaption a{
+	text-decoration: none;
+	color: #0065a8;
+}
+
+.link-scheda{
+	color:#9e3a26;
+	text-decoration: none;
+}
+
+.link-scheda:hover, figcaption a:hover{
+	text-decoration: underline;
+}
+
+.images-container {
+	width: 100%;
+	margin: 0 auto;
+	display: flex;
+	gap: 20px; /* spazio tra le immagini */
+}
+
+.images-container .image-figure figcaption{
+	width: 100%;
+}
+
+.side-img {
+	width: 100%;
+}
+
+.image-figure .images-container {
+	text-align: left;
+	margin-top: 5px;
+}
+
+.storymap-slide .background {
+	background: linear-gradient(to right, #123456 0%, #123456 50%, rgba(18, 52, 86, 0.5) 75%, rgba(18, 52, 86, 0) 100%);
+}
+
+.map-container{
+	width: 100%;
+	margin: auto;
+}
+
+/*FINE CODICE PERCORSO TEMATICO*/
+
+/*INIZIO CODICE CATALOGO OPERE*/
+
+/*filtri attivi e sort by*/
+.filtri-sortby {
+	width: 70%;
+	margin: 30px 0px 0px 15px;
+}
+
+.filtri-attivi, .sortby {
+	display: inline-block;
+	height: fit-content;
+}
+
+.filtri-attivi h3 {
+	display: inline;
+	margin-right: 10px;
+}
+
+.filtri-attivi p{
+	display: inline;
+	border: solid 2px #9e3a26;
+	border-radius: 24px;
+	padding: 5px 20px 5px 15px;
+	margin-left: 20px;
+}
+
+.filtri-attivi p:hover{
+	background-color: #9e3a26;
+	color: white;
+	transition: .3s ease-in-out;
+	cursor: default;
+}
+
+.filtri-attivi span{
+	position: relative;
+	color: white;
+	display: none;
+	left: 10px;
+	cursor: pointer;
+}
+
+.filtri-attivi p:hover span{
+	display: inline;
+}
+
+.sortby {
+	float: right;
+}
+
+.sortby select {
+	padding: 5px 10px;
+	background-color: #000;
+	color: white;
+}
+
+.sortby select{
+	padding: 5px 10px;
+	font-size: 14px;
+	background-color: #000;
+	color: #fff;
+	border-radius: 5px;
+}
+
+/*fine filtri attivi e sort by*/
+
+.main{
+	clear: both;
+	display: flex;
+	flex-direction: row-reverse;
+}
+
+.container {
+	width: 70%;
+	height: auto;
+	margin: auto;
+}
+
+.card-row {
+	width: 100%;
+	height: 350px;
+	/*border: solid 3px black;*/
+	margin-top: 40px;
+}
+
+.card-row a{
+	text-decoration: none;
+	color: black;
+}
+
+.card-opera{
+	width: 30%;
+	height: 100%;
+	margin-right: 10px;
+	transition: box-shadow 0.3s ease-in-out;
+	/*border: solid 2px red;*/
+	cursor: pointer;
+	border-radius: 5px;
+}
+
+.card-opera img{
+}
+
+.card-opera:hover{
+	-webkit-box-shadow: 2px 1px 22px 5px rgba(0,0,0,0.5); 
+	box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+.card-opera:hover img{
+	transform: scale(1.1);
+	transition: 0.6s;
+}
+
+.card-opera:hover .bottone-scopri{
+	background-color: #9e3a26;
+}
+
+.card-image{
+	width: 100%;
+	height: 70%;
+	/*border: solid 2px blue;*/
+	overflow: hidden;
+	border-radius: 5px;
+	border-bottom-left-radius: 0px;
+	border-bottom-right-radius: 0px;
+
+}
+
+.card-image img{
+	max-width: 100%;
+	transition: transform 0.6s ease-in-out;
+}
+
+.card-description{
+	text-align: left;
+	margin: 0px 0px 15px 5px;
+}
+
+.bottone-scopri{
+	position:relative;
+	width: 40%;
+	background-color: black;
+	padding: 5px 10px 5px;
+	text-align: center;
+	border-radius: 5px;
+}
+
+.bottone-scopri span{
+	text-decoration: none;
+	color: white;
+}
+
+.first-card, .second-card{
+	float: left;
+}
+
+.third-card{
+	float:left;
+}
+
+/*CSS PER SIDEBAR*/
+.filter-container {
+	width: 300px;
+	position: sticky;
+	top: 0;
+	height: fit-content;
+	background-color:#9e3a26;
+	box-shadow: -5px 0 5px rgba(0, 0, 0, 0.1);
+	overflow-y: auto;
+	padding: 0px 0px 50px 30px;
+	border-radius: 5px;
+	transform: translateX(0);
+}
+
+.filter-container h3{
+	color:#E4DBBE;
+	display: inline;
+}
+
+#sidebar-title{
+	margin: 30px 0px;
+	color:#E4DBBE;
+}
+
+.accordion {
+	background-color: #9e3a26;
+	cursor: pointer;
+	width: 90%;
+	border: none;
+	text-align: left;
+	font-size: 17px;
+	transition: 0.4s;
+	padding: 10px;
+	border-bottom: 2px solid #E4DBBE;
+	margin-bottom: 10px;
+}
+
+.accordion:after {
+	content: '\002B';
+	color: #E4DBBE;
+	font-weight: bold;
+	float: right;
+	margin-right: 5px;
+}
+
+.active-filter:after {
+	content: "\2212";
+}
+
+.panel {
+	width: 90%;
+	background-color: #b16a5b;
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.2s ease-out;
+	border-radius: 5px;
+}
+
+.panel label:last-of-type{
+	padding-bottom: 10px;
+}
+
+.filtri-buttons{
+	width: 100%;
+	display: flex;
+}
+
+.rimuovi-filtri, .bottone-filtri{
+	text-align: center;
+	cursor: pointer;
+	margin-top: 20px;
+	width: fit-content;
+	padding: 10px;
+	border: 2px black solid;
+	border-radius: 5px;
+}
+
+.rimuovi-filtri{
+	margin-left: 10px;
+	color:#9e3a26;
+	background-color: white;
+}
+
+.bottone-filtri{
+	color: white;
+	background-color: #9e3a26;
+}
+
+.bottone-filtri:hover{
+	background-color: rgba(255, 255, 255, 0.151);
+}
+
+.rimuovi-filtri:hover{
+	background-color: rgba(255, 255, 255, 0.795);
+}
+
+/* Contenitore degli articoli per evitare sovrapposizione */
+.item-container {
+	margin-right: 240px; /* Larghezza della sidebar */
+	transition: margin-right 0.3s ease;
+}
+
+.item-container.full-width {
+	margin-right: 0;
+}
+
+.item-container {
+	margin-right: 240px;
+}
+
+.artist-filter-section {
+	max-height: 150px;
+	overflow-y: auto;
+	margin-bottom: 20px;
+}
+
+
+.filter-container label {
+	display: inline-block;
+	white-space: nowrap;
+	overflow: hidden;   
+	text-overflow: ellipsis; 
+	margin-bottom: 5px;
+	width: 100%;       
+	cursor: pointer;    
+	box-sizing: border-box;
+}
+
+.item {
+	margin: 10px;
+	padding: 10px;
+	/*border: 1px solid #272525;*/
+	border-bottom: 1px solid #272525;
+}
+
+/*Pagination*/
+.pagination {
+	display: block;
+	font-size: 13px;
+	position: relative;
+	top: 30px;
+	margin: 60px 0;
+	text-align: center;
+}
+
+.pagination a {
+	color: black;
+	padding: 8px 16px;
+	text-decoration: none;
+	transition: background-color 0.3s;
+}
+
+.pagination a.attivo {
+	background-color: #9e3a26;
+	color: #E4DBBE;
+}
+
+.pagination a:hover:not(.attivo) {
+	background-color: #9e3a267c;
+}
+
+/*Box percorsi tematici*/
+
+.titolo-box{
+	text-align: center;
+}
+
+.titolo-box h2{
+	color: #E4DBBE;
+	padding-top: 15px;
+}
+
+.separator {
+	display: flex;
+	align-items: center;
+	text-align: center;
+}
+
+.separator::before,
+.separator::after {
+	content: '';
+	flex: 1;
+	border-bottom: 2px solid #E4DBBE;
+	margin: 0px 50px;
+}
+
+.separator:not(:empty)::before {
+	margin-right: 40px;
+}
+
+.separator:not(:empty)::after {
+	margin-left: 40px;
+}
+
+.box-percorsi {
+	background-color: #9e3a26;
+	height: 700px;
+	width: 100%;
+	text-align: center;
+	overflow: hidden;
+}
+
+.titolo-box h2 {
+	font-size: 24px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+.contenitore-immagini {
+	display: flex;
+	width: 100%;
+	overflow: hidden;
+}
+
+.box {
+	position: relative;
+	width: 50%;
+	cursor: pointer;
+	transition: transform 0.3s ease-in-out;
+}
+
+
+.box img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	transition: opacity 0.3s ease-in-out;
+}
+
+.box:hover img {
+	opacity: 0.6;
+}
+
+.nome-percorso {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background: rgba(0, 0, 0, 0.6);
+	color: white;
+	padding: 10px 20px;
+	font-size: 20px;
+	text-align: center;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.box:hover .nome-percorso {
+	background: rgba(0, 0, 0, 0.8);
+}
+
+/*FINE CODICE CATALOGO OPERE*/
+
+/*INIZIO CODICE PAGINA CHIESA*/
+.page-header {
+	padding: 20px 30px 10px;
+	text-align: center;
+}
+
+.page-header h1 {
+	font-size: 2em;
+	margin: 0;
+	color: #333;
+}
+
+.churchImg{
+	background-image: url('https://static.bolognawelcome.com/immagini/6a/43/df/3d/20240424170514.jpg');
+}
+
+.first-paragraph{
+	float: left;
+	width: 50%;
+	padding: 60px 0px 30px 60px;
+}
+
+.first-paragraph p{
+	margin-bottom: 20px;
+	line-height: 1.5;
+}
+
+.first-paragraph a{
+	text-decoration: none;
+	color: #0065a8;
+}
+
+.first-paragraph a:hover{
+	text-decoration: underline;
+}
+
+.read-more-button a:hover{
+	text-decoration: none;
+}
+
+.paragraph-title{
+	margin-bottom: 30px;
+	font-size: 28px;
+}
+
+/*Readmore*/
+.read-more-content {
+	display: none;
+}
+
+.bibliografia{
+	margin-top: 35px;
+}
+
+.bibliografia h3{
+	margin-bottom: 20px;
+}
+
+.bibliografia p{
+	margin-bottom: 15px;
+}	
+
+
+.read-more-toggle {
+	cursor: pointer;
+	font-weight: bold;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 10px;
+	text-align: center;
+}
+
+.read-more-button {
+	text-align: center;
+}
+
+.toggle-text{
+	color: #9e3a26;
+}
+
+.readmore-arrow {
+	width: 25px;
+	height: 25px;
+	transition: transform 0.3s ease;
+}
+
+.readmore-arrow.up {
+	transform: rotate(180deg);
+}
+
+/*Gallery della chiesa*/
+.chiesa-gallery {
+	width: 50%;
+	float: right;
+	padding: 60px;
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+
+.gallery-wrapper {
+	position: relative;
+	width: 90%;
+}
+
+.slider {
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+}
+
+.slider-track {
+	display: flex;
+	transition: transform 0.5s ease;
+	height: 100%;
+}
+
+.slider img {
+	width: 100%;
+	flex-shrink: 0;
+}
+
+.gallery-arrow {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	background-color: rgba(255, 255, 255, 0.7);
+	border: none;
+	font-size: 24px;
+	cursor: pointer;
+	padding: 5px 10px;
+	z-index: 10;
+	border-radius: 6px;
+}
+
+.gallery-arrow-left {
+	left: -40px;
+}
+
+.gallery-arrow-right {
+	right: -40px;
+}
+
+.gallery-dots {
+	margin-top: 15px;
+	display: flex;
+	gap: 8px;
+	justify-content: center;
+}
+
+.gallery-dot {
+	width: 12px;
+	height: 12px;
+	border-radius: 50%;
+	background-color: #bbb;
+	cursor: pointer;
+}
+
+.gallery-dot.active {
+	background-color: #9e3a26;
+}
+
+.slide {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	flex-shrink: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;   
+}
+
+.slide img {
+	width: 100%;
+	height: auto;
+	max-height: 100%;
+	display: block;
+	object-fit: contain;
+	align-items: center;
+}
+
+.caption {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	padding: 10px;
+	background-color: rgba(0, 0, 0, 0.6);
+	color: white;
+	font-size: 14px;
+	text-align: center;
+	box-sizing: border-box;
+}
+
+.caption p{
+	font-size: 20px;
+}
+
+/*Sezione opere custodite*/
+.opere-custodite{
+	clear: both;
+	float: left;
+	width: 50%;
+	height: fit-content;
+	padding: 50px 0px 150px 60px;
+}
+
+
+.card-row {
+	margin: auto;
+	width: 100%;
+	height: 350px;
+	/*border: solid 3px black;*/
+	margin-top: 40px;
+}
+
+.card-row a{
+	text-decoration: none;
+	color: black;
+}
+
+.card-opera{
+	width: 30%;
+	height: 100%;
+	margin-right: 10px;
+	transition: box-shadow 0.3s ease-in-out;
+	/*border: solid 2px red;*/
+	cursor: pointer;
+	border-radius: 5px;
+}
+
+.card-opera:hover{
+	-webkit-box-shadow: 2px 1px 22px 5px rgba(0,0,0,0.5); 
+	box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+.card-opera:hover img{
+	transform: scale(1.1);
+	transition: 0.6s;
+}
+
+.card-opera:hover .bottone-scopri{
+	background-color: #9e3a26;
+}
+
+.card-image{
+	width: 100%;
+	height: 70%;
+	/*border: solid 2px blue;*/
+	overflow: hidden;
+	border-radius: 5px;
+	border-bottom-left-radius: 0px;
+	border-bottom-right-radius: 0px;
+}
+
+.card-image img{
+	max-width: 100%;
+	transition: transform 0.6s ease-in-out;
+}
+
+.card-description{
+	text-align: left;
+	margin-left: 5px;
+	margin-bottom: 15px;
+}
+
+.bottone-scopri{
+	position:relative;
+	width: 40%;
+	background-color: black;
+	padding: 5px 10px 5px 10px;
+	text-align: center;
+	border-radius: 5px;
+}
+
+.bottone-scopri span{
+	text-decoration: none;
+	color: white;
+}
+
+.first-card, .second-card{
+	float: left;
+}
+
+.third-card{
+	float:left;
+}
+
+/*Mappa interattiva*/
+
+.planimetria{
+	display: flex;
+	float: right;
+	width: 50%;
+	height: fit-content;
+	justify-content: center;
+}
+
+/*Mappa iframe*/
+.titoloMappa{
+	clear: both;
+	margin-bottom: 10px;
+	text-align: left;
+}
+
+.contenitore-mappa, .titoloMappa, .indirizzo{
+	margin: 10px 25%;
+}
+
+.indirizzo{
+	margin-bottom: 30px;
+}
+
+/*FINE CODICE PAGINA CHIESA*/
+
+/*INIZIO CODICE PAGINA ITEM*/
+
+.firstBox{
+	height: 640px;
+	background-color: gray;
+}
+
+.bigImg{
+	max-width: 100%;
+	max-height: 100%;
+	height: 90%;
+	position: relative;
+	display: none;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.bigImg img{
+	height: 10%;
+}
+
+/*ICONS*/
+
+.icons{
+	position:relative;
+	width:500px; /*width casuale per non fargli fare la scrollbar orizzontale*/
+	top: 40px;
+	left:56%;
+}
+
+.icons img{
+	height: 15px;
+	margin-left: 5px;
+}
+
+/*END ICONS*/
+
+.myImg:hover {
+	box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
+}
+
+.secondBox{
+	height: 130px;
+	background-color: rgb(63, 63, 63);
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	overflow: hidden;
+}
+
+.smallImg{
+	position:relative;
+	top:25px;
+	max-width: 100%;
+	max-height: 130px;
+	object-fit:contain;
+	padding: 15px 25px 15px;
+	cursor: pointer;
+}
+
+.smallImg:hover{
+	background-color: rgba(158, 58, 38, 0.13);        
+}
+
+.highlightImg{
+	background-color: rgba(158, 58, 38, 0.432) !important;        
+}
+
+
+.containerImg{
+	height: 180px;
+	width: auto;
+	display: inline-block;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	width: auto;
+	padding: 16px;
+	color: white;
+	font-weight: bold;
+	font-size: 20px;
+	background-color: rgba(0, 0, 0, 0.4);
+	border-radius: 0 3px 3px 0;
+	user-select: none;
+	-webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+	right: 0;
+	border-radius: 3px 0 0 3px;
+}
+
+.prevCorr{
+	left: 10%;
+	border-radius: 3px;
+}
+
+.nextCorr{
+	right: 10%;
+	border-radius: 3px;
+}
+
+
+.prev:hover, .next:hover {
+	background-color: rgba(0, 0, 0, 0.8);
+}
+
+/*CODICE W3SCHOOLS PER LA TAB DEI METADATI*/
+
+/* Style the tab */
+.text-content{
+	display: block;
+	width: 40%;
+	margin: auto;
+	margin-top: 15px;
+}
+
+.text-content h1, .text-content h2, .text-content h3{
+	display: inline-block;
+	padding-bottom: 20px;
+}
+
+.tab {
+	overflow: hidden;
+	border-bottom: 1px solid #e7e7e785;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+	background-color: #E4DBBE;
+	float: left;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	padding: 14px 16px;
+	transition: 0.5s;
+	font-size: 17px;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+	border-bottom: 3px solid #9e3a26;
+	color:#9e3a26;
+}
+
+/* Style the tab content */
+.tabcontent {
+	height: 170px;
+	padding: 6px 12px;
+	-webkit-animation: fadeEffect 1s;
+	animation: fadeEffect 1s;
+	margin-bottom: 40px;
+}
+
+.tabcontent .chiave, .tabcontent .valore{
+	margin-bottom: 10px;
+}
+
+.tabcontent a{
+	text-decoration: none;
+	color: #0065a8;
+}
+
+.tabcontent a:hover{
+	text-decoration: underline;
+}
+
+/* Fade in tabs */
+@-webkit-keyframes fadeEffect {
+	from {opacity: 0;}
+	to {opacity: 1;}
+}
+
+@keyframes fadeEffect {
+	from {opacity: 0;}
+	to {opacity: 1;}
+}
+
+#descrizione-opera, #metadati-immagine{
+	margin-top: 15px;
+}
+
+#descrizione-opera{
+	margin-bottom: 750px;
+}
+
+#descrizione-opera p{
+	line-height: 1.5;
+}
+
+.bibliografia{
+	margin-top: 35px;
+}
+
+.bibliografia p{
+	margin-bottom: 15px;
+}
+
+/*FINE CODICE W3SCHOOLS PER LA TAB DEI METADATI*/
+
+.fa-parte-di{
+	margin-bottom: 50px;
+}
+
+.fa-parte-di a{
+	color: #E4DBBE;
+	text-decoration: none;
+}
+
+.clickable-container{
+	width: fit-content;
+	background-color: #9e3a26;
+	border: 2px solid #9e3a26;
+	color:#E4DBBE;
+	border-radius: 10px;
+	padding: 8px;
+	margin-top: 5px;
+	cursor: pointer;
+}
+
+.clickable-container:hover{
+	background-color: white;
+	color:#9e3a26;
+}
+
+.chiave, .valore{
+	float: left;
+	margin-top: 15px;
+}
+
+.chiave{
+	width: 40%;
+	clear: both;
+}
+
+.valore{
+	width: 60%;
+}
+
+.tabcontent .valore {
+	text-align: right;
+}
+
+.tabcontent .valore:last-child{
+	margin-bottom: 150px;
+}
+
+/*INIZIO CODICE W3SCHOOLS PER LA FINESTRA MODALE*/
+
+
+.myImg {
+	cursor: pointer;
+	transition: 0.3s;
+}
+
+/* The Modal (background) */
+.modal {
+	display: none; /* Hidden by default */
+	position: fixed; /* Stay in place */
+	z-index: 1; /* Sit on top */
+	padding-top: 30px; /* Location of the box */
+	left: 0;
+	top: 0;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	overflow: hidden; /* Disabled scroll*/
+	background-color: rgba(0, 0, 0, 0.95); /* Black w/ opacity */
+}
+
+/* Modal Content (Image) */
+.modal-content {
+	margin: auto;
+	display: block;
+	width: auto;
+	max-height: 90vh;
+}
+
+/* Caption of Modal Image (Image Text) - Same Width as the Image */
+#caption {
+	margin: auto;
+	display: block;
+	width: 80%;
+	max-width: 700px;
+	height: 150px;
+	text-align: center;
+	color: #ccc;
+	padding: 10px 0;
+}
+
+/* Add Animation - Zoom in the Modal */
+.modal-content, #caption {
+	animation-name: zoom;
+	animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+	from {transform:scale(0)}
+	to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+	position: absolute;
+	top: 15px;
+	right: 35px;
+	color: #f1f1f1;
+	font-size: 40px;
+	font-weight: bold;
+	transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+	color: #bbb;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.modal-icon{
+	position: absolute;
+	top: 23px;
+	opacity: 0.8;
+	cursor: pointer;
+	transition: 0.3s;
+}
+
+.zoom-in{
+	right: 100px;
+}
+
+.zoom-out{
+	right: 70px;
+}
+
+.modal-icon:hover{
+	opacity: 1;
+}
+
+.full-screen{
+	top: 25px;
+	right: 135px;
+}
+
+
+
+/* Modal Arrows */
+.modal-arrows {
+	position: absolute;
+	top: 50%;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	transform: translateY(-50%);
+}
+
+.arrow {
+	color: white;
+	font-size: 40px;
+	cursor: pointer;
+	user-select: none;
+}
+
+#nextImg{
+	right: 0;
+}
+
+/* Style the Image Used to Trigger the Modal */
+body.modal-open{
+	overflow: hidden; /*per evitare che quando si scrolli scenda la pagina*/
+	height: 100%;
+}
+/*FINE CODICE W3SCHOOLS PER LA FINESTRA MODALE*/
+
+/*CODICE BOX CORRELATI*/
+
+.titolo-box{
+	text-align: center;
+}
+
+.titolo-box h2{
+	color: #E4DBBE;
+	padding-top: 15px;
+}
+
+.separator {
+	display: flex;
+	align-items: center;
+	text-align: center;
+}
+
+.separator::before, .separator::after {
+	content: '';
+	flex: 1;
+	border-bottom: 2px solid #E4DBBE;
+	margin: 0px 50px;
+}
+
+.separator:not(:empty)::before {
+	margin-right: 40px;
+}
+
+.separator:not(:empty)::after {
+	margin-left: 40px;
+}
+
+.box-correlati {
+	position: relative; /* Serve per ancorare le frecce */
+	background-color: #9e3a26;
+	height: 500px;
+	width: 100%;
+	overflow: hidden;
+	text-align: center;
+}
+
+.modalità-correlati{
+	margin-top: 15px;
+}
+
+.modalità-correlati span{
+	margin: 0 60px;
+	font-size: 20px;
+}
+
+.modalità-correlati :hover{
+	text-decoration: underline;
+}
+
+.modalità-correlati a{
+	color: #E4DBBE;
+	text-decoration: none;
+}
+
+.container-correlati{
+	position: absolute; /* Posiziona la gallery sopra il titolo-box */
+	top: 50%; /* Centra verticalmente */
+	left: 50%;
+	width: auto;
+	transform: translate(-50%, -50%); /* Aggiungi il translate per centrare esattamente */
+	overflow: hidden;
+	margin: 50px auto; /* Centra la gallery senza toccare il body */
+	padding: 10px;
+	border-radius: 10px;
+}
+
+.gallery-container {
+	overflow: hidden;
+	width: 825px; /* Regola la larghezza in base al numero di immagini visibili */
+}
+
+.gallery{
+	display: flex;
+	gap: 10px;
+	transition: transform 0.8s ease-in-out;
+}
+
+.gallery img {
+	width: 200px; /* Imposta la larghezza di ogni immagine */
+	height: auto;
+	object-fit: cover;
+}
+
+.progress-dots {
+	text-align: center;
+	margin-top: 15px;
+}
+
+.slideshow-dot {
+	display: inline-block;
+	height: 10px;
+	width: 10px;
+	margin: 0 5px;
+	background-color: rgb(68, 68, 68);
+	border-radius: 50%;
+	transition: background-color 0.3s ease;
+	cursor: pointer;
+}
+
+.slideshow-dot.active {
+	background-color: #E4DBBE;
+}
+
+.slideshow-arrow {
+	position: absolute;
+	top: 60%;
+	transform: translateY(-50%);
+	background-color: rgba(0, 0, 0, 0.5);
+	color: white;
+	border: none;
+	cursor: pointer;
+	font-size: 20px;
+	padding: 10px;
+	border-radius: 5%;
+}
+
+.slideshow-arrow-left {
+	left: 25%;
+}
+
+.slideshow-arrow-right {
+	right: 25%;
+}
+
+.slideshow-arrow:hover {
+	background-color: rgba(0, 0, 0, 0.8);
+}
+
+/*FINE CODICE PAGINA ITEM*/
+
+/*INIZIO CODICE MAPPA DELLE CHIESE*/
+
+/*Searchbar*/
+.searchbar{
+	width: 50%;
+	display: flex;
+	align-items: center;
+	padding: 10px;
+	border-radius: 15px;
+	background: #f6f6f6;
+	transition: box-shadow 0.5s;
+	box-shadow: 3px 3px 4px 1px rgba(0, 0, 0, 0.3);
+	position: relative;
+	top: 30%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.searchbar-input{
+	width: 400px;
+	font-size: 14px;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #333333;
+	margin-left: 10px;
+	outline: none;
+	border: none;
+	background: transparent;
+}
+
+.searchbar:focus-within{
+	box-shadow: 0 0 4px rgba(0, 0, 0, 0.75);
+}
+
+.searchbar-input::placeholder,
+.searchbar-icon{
+	color: rgba(0, 0, 0, 0.5)
+}
+
+/*FINE CODICE SEARCHBAR*/
+
+.target{
+	scroll-margin-top: 77px; /* altezza della navbar */
+}
+
+#map{
+	position: fixed;
+	width: 50%;
+	height: 100vh;
+	display: flex;
+}
+
+.left-half{
+	width: 50%;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+.right-half{
+	width:50%;
+	float: right;
+	display: flex;
+	flex-direction: column;
+	overflow-y: auto;
+}
+
+.content{
+	width: 90%;
+	height: 400px;
+	color: black;
+	background:  linear-gradient(rgba(228, 219, 190, 0.85), rgba(228, 219, 190, 0.85)), 
+	url('https://img.freepik.com/foto-premium/vecchia-carta-di-texture-vintage_105034-886.jpg') no-repeat center center / cover;
+	box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+	background-color: #9e3a26e7;
+	position: relative;
+	margin:auto;
+	margin-bottom: 20px;
+	display:block;
+	border: 5px solid #9e3a26;
+	border-radius: 7px;
+}
+
+.content-title{
+	height: auto;
+	width: 55%;
+	float: right;
+	text-align: center;
+}
+
+.content h2, .content h3{
+	margin: 15px 0px 10px 0px;
+}
+
+.content h2{
+	font-size: 27px;
+}
+
+.imgChiesa{
+	/*max-height:250px;
+	max-width: 100%;  /*per fare in modo che se si rimpicciolisce la pagina, non strabordi*/
+	max-width: 45%;
+	width: auto;  
+	float: left;      
+}
+
+.descrizione-chiesa{
+	text-align: justify;
+	padding: 0px 15px;
+}
+
+.scopri{
+	margin-left: 15px;
+}
+
+.scopri a{
+	color: rgba(70, 151, 208, 255);
+	text-decoration: none;
+}
+
+.scopri a:hover{
+	border-bottom: 2px solid rgba(70, 151, 208, 255);
+	/*text-decoration: underline;*/
+}
+
+.descrizione-chiesa a{
+	color: #0065a8;
+	text-decoration: none;
+}
+
+.descrizione-chiesa a:hover{
+	color: #004472;
+	text-decoration: underline;
+}
+
+.scheda-chiesa{
+	margin: 15px 0px 0px 15px;
+
+}
+
+.scheda-chiesa a{
+	color: #9e3a26;
+	text-decoration: none;
+}
+
+.scheda-chiesa a:hover{
+	border-bottom: 2px solid #9e3a26;
+}
+
+.sotto-img{
+	width: 45%;
+	height: auto;
+	position: relative;
+	top: 30px; /*da sistemare*/
+}
+
+
+.altreOpere{
+	overflow: hidden; /*per non ignorare le immagini che sono float*/
+	position: relative;
+	margin: auto;
+	width: calc(15px * 6 + 90px * 3);
+	max-width: 100%;
+}
+
+.altreOpere img{
+	max-width: 100%;
+	width: 90px;
+	max-height: 130px;
+	float: left;
+	margin: 0px 15px 15px 15px;
+}
+
+
+/*CODICE PER IMAGE OVERLAY W3SCHOOLS*/
+.overlay, .overlay2, .overlay3{
+	position: absolute;
+	bottom: 15px;
+	right: 0;
+	background-color: #9e3a26;
+	overflow: hidden;
+	width: 90px;
+	height: 0;
+	transition: .5s ease;
+}
+
+.overlay{
+	left: 15px;
+}
+
+.overlay2{
+	left: calc(15px + 110px + 10px);
+}
+
+.overlay3{
+	left: calc(15px + 90px + 30px + 90px + 30px);
+}
+
+.icona:hover .overlay, .icona:hover .overlay2, .icona:hover .overlay3 {
+	height: 50%;
+}
+
+.icona {
+	overflow: hidden;
+	float: left;
+}
+
+.titolo-opera {
+	width:100%;
+	color:#E4DBBE;
+	font-size: 10px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+/*FINE codice per image overlay*/
+
+/*FINE CODICE MAPPA DELLE CHIESE*/
