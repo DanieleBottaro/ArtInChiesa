@@ -29,11 +29,11 @@
 
 		<header class="header" id="top-page">
 
-			<a href="Index.html" class="logo"><img src="Immagini opere e icone\Icone e logo\Logo-sito.png"></a>
+			<a href="index.html" class="logo"><img src="Immagini opere e icone\Icone e logo\Logo-sito.png"></a>
 
 			<nav class="navbar">
 				<div class="navbar-left">
-					<a href="Index.html">Home</a>
+					<a href="index.html">Home</a>
 					<a href="Mappa-chiese.html">Mappa delle chiese</a>
 					<a href="Catalogo-opere.html">Catalogo opere</a>
 
@@ -70,7 +70,7 @@
 		</header>
 
 		<div class="breadcrumbs">
-			<p><a href="Index.html">Home</a></p>
+			<p><a href="index.html">Home</a></p>
 			<p class="crumbs-separator"><strong>/</strong></p>
 			<p><a href="Catalogo-opere.html">Catalogo opere</a></p>
 			<p class="crumbs-separator"><strong>/</strong></p>
@@ -350,16 +350,16 @@
 			//INIZIO CODICE W3SCHOOLS PER LO SLIDESHOW
 
 			
-			let slideIndex = 1;
-			showDivs(slideIndex);
+			let slideindex = 1;
+			showDivs(slideindex);
 
 			function showDivs(n) {
 				let i;
 				const slides = document.getElementsByClassName("myImg");
 				const dots = document.getElementsByClassName("demo");
 
-				if (n > slides.length) {slideIndex = 1}
-				if (n < 1) {slideIndex = slides.length}
+				if (n > slides.length) {slideindex = 1}
+				if (n < 1) {slideindex = slides.length}
 
 				for (i = 0; i < slides.length; i++) {
 					slides[i].style.display = "none";
@@ -367,17 +367,17 @@
 				for (i = 0; i < dots.length; i++) {
 					dots[i].classList.remove("highlightImg");
 				}
-				slides[slideIndex-1].style.display = "block";
-				dots[slideIndex-1].classList.add("highlightImg");
+				slides[slideindex-1].style.display = "block";
+				dots[slideindex-1].classList.add("highlightImg");
 			}
 
 			function currentDiv(n) {
-				showDivs(slideIndex = n);
+				showDivs(slideindex = n);
 			}
 
 			function plusDivs(n) {
-				slideIndex += n;
-				showDivs(slideIndex);
+				slideindex += n;
+				showDivs(slideindex);
 			}
 
 
@@ -392,14 +392,14 @@
 
             // Array of images
             const imageArray = Array.from(images);
-            let currentIndex = 0;
+            let currentindex = 0;
 
             // Show the current image in the modal
             function showImage(index) {
                 const img = imageArray[index];
                 modalImg.src = img.src;
                 captionText.innerHTML = img.alt;
-                currentIndex = index;
+                currentindex = index;
             }
 
             // Loop through each image and attach the modal functionality
@@ -427,8 +427,8 @@
 
             // Arrow "Previous"
             document.getElementById('prevImg').onclick = function() {
-                if (currentIndex > 0) {
-                    showImage(currentIndex - 1); // Vai all'immagine precedente
+                if (currentindex > 0) {
+                    showImage(currentindex - 1); // Vai all'immagine precedente
                 } else {
                     showImage(imageArray.length - 1); // Se sei alla prima, vai all'ultima immagine
                 }
@@ -436,8 +436,8 @@
 
             // Arrow "Next"
             document.getElementById('nextImg').onclick = function() {
-                if (currentIndex < imageArray.length - 1) {
-                    showImage(currentIndex + 1); // Vai all'immagine successiva
+                if (currentindex < imageArray.length - 1) {
+                    showImage(currentindex + 1); // Vai all'immagine successiva
                 } else {
                     showImage(0); // Se sei all'ultima, torna alla prima immagine
                 }
