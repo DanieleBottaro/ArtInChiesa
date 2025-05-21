@@ -1,13 +1,29 @@
 <!DOCTYPE html>
 <html>
 	<head>
-	<title>Home</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<link rel="icon" type="image/x-icon" href="Immagini opere e icone\Icone e logo\Logo-Sito-favicon.png">
+		<title>Home</title>
 
-	<link rel="stylesheet" href="style/Tentativo-CSS-unico.css"/>
-	
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=search" />
+		<link rel="icon" type="image/x-icon" href="Immagini opere e icone\Icone e logo\Logo-Sito-favicon.png">
+
+		<link rel="stylesheet" href="CSS/style.css"/>
+		
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=search" />
+
+		<!--Metadati della pagina web-->
+		<link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"/>
+
+		<META NAME="DC.Title" content="ArtInChiesa"/>
+		<META name="DC.Creator" content="Daniele Bottaro"/>
+		<META name="DC.Subject" content="Opere d'arte tra XIII e XV secolo"/>
+		<META name="DC.Description" content="Catalogo delle opere realizzate tra XIII e XV secolo conservate all'interno delle chiese di Bologna"/>
+		<META name="DC.Publisher" content="Github Pages"/>
+		<META name="DC.Date" content="2025-05-21"/>
+		<META name="DC.Type" content="Catalogo web"/>
+		<META name="DC.Format" content="Sito web"/>
+		<META name="DC.Language" content="It"/>
 
 	</head>
 
@@ -15,12 +31,13 @@
 
 		<header class="header" id="top-page">
 
-			<a href="#" class="logo"><img src="Immagini opere e icone\Icone e logo\Logo-sito.png"></a>
+			<a href="Index.html" class="logo"><img src="Immagini opere e icone\Icone e logo\Logo-sito.png"></a>
 
 			<nav class="navbar">
 				<div class="navbar-left">
-					<a href="Index.html">Home</a>
-					<a href="MappaSitoImmobiliare.html">Mappa delle chiese</a>
+					<a href="Index.html" style="color: #9e3a26;">Home</a>
+					<a href="Mappa-chiese.html">Mappa delle chiese</a>
+					<a href="Catalogo-opere.html">Catalogo opere</a>
 
 					<div class="dropdown">
 
@@ -29,14 +46,12 @@
 
 						<div class="dropdown-content">
 						  <a href="#">Gli spazi liturgici e le loro funzionalità</a>
-						  <a href="Percorso-tematico.html">Occhio al dettaglio: punzoni, graniture e stiletto</a>
+						  <a href="Percorso-tematico.html">Punzoni, graniture e stiletto: la materialità delle opere</a>
 						</div>
 					</div>
-					
-					<a href="#">Catalogo opere</a>
+										
 				</div>  
 				<div class="navbar-right">
-					<a href="PaginaItem.html">Pagina Item</a>
 					<a href="#" id="contatti">Contatti</a>
 					<div class="dropdown">
 
@@ -76,7 +91,7 @@
 
 		<div class="text text-left">
 			<h2 id="vaiSotto">Il progetto</h2>
-			<p>Il progetto intende catalogare tutte le opere d'arte che vanno dal XIII al XV secolo situate all'interno delle chiese del centro storico di Bologna. E' possibile esplorare la collezione attraverso la ricerca manuale, la mappa delle chiese, la tipologia delle opere o il secolo cui appartengono, oppure attraverso i percorsi tematici proposti.</p>
+			<p>Questo progetto nasce per raccogliere e rendere accessibili le opere d’arte conservate nelle chiese bolognesi tra il XIII e il XV secolo. Attraverso mappe interattive, un catalogo filtrabile e pagine dedicate a edifici e percorsi tematici, è possibile muoversi tra luoghi, immagini e informazioni in modo semplice e diretto. Uno strumento pensato per orientarsi meglio tra le chiese e scoprire, con facilità, cosa custodiscono.</p>
 		</div>
 
 		<div class="text text-right">
@@ -93,15 +108,15 @@
 
 				<div class="immagini-row">
 					<div class="img-container">
-						<img src="Immagini opere e icone\Particolare-Arca-Domenico.JPG" />
+						<img src="Immagini opere e icone\Particolare-Arca-Domenico.JPG" alt="Particolare dell'Arca di San Domenico"/>
 						<a href="#"><div class="secolo"><p>XIII SECOLO</p></div></a>
 					</div>
 					<div class="img-container">
-						<a href="#"><img src="Immagini opere e icone\Deposizione-MaestroTedescoXIVXV.JPG" /></a>
+						<a href="#"><img src="Immagini opere e icone\Deposizione-MaestroTedescoXIVXV.JPG" alt="Deposizione in pietra di un Maestro tedesco del XIV-XV secolo"/></a>
 						<a href="#"><div class="secolo"><p>XIV SECOLO</p></div></a>
 					</div>
 					<div class="img-container">
-						<a href="#"><img src="Immagini opere e icone\SanGiovanniBattista-XVsecolo.JPG" /></a>
+						<a href="#"><img src="Immagini opere e icone\SanGiovanniBattista-XVsecolo.JPG" alt="Tavola raffigurante San Giovanni Battista di un pittore bolognese/ferrarese del XV secolo"/></a>
 						<a href="#"><div class="secolo"><p>XV SECOLO</p></div></a>
 					</div>
 				</div>
@@ -114,37 +129,37 @@
 
 				<div class="immagini-row">
 					<div class="img-container">
-						<img src="Immagini opere e icone\Maesta-Cimabue.JPG" />
+						<img src="Immagini opere e icone\Maesta-Cimabue.JPG" alt="Maestà di Cimabue nella Chiesa di Santa Maria dei Servi di Bologna"/>
 						<a href="#"><div class="secolo"><p>PALA D'ALTARE</p></div></a>
 					</div>
 					<div class="img-container">
-						<a href="#"><img src="Immagini opere e icone\Crocifisso-SimoneDiFilippo.JPG" /></a>
+						<a href="#"><img src="Immagini opere e icone\Crocifisso-SimoneDiFilippo.JPG" alt="Crocifisso di Simone dei Crocifissi nella Chiesa di Santo Stefano a Bologna"/></a>
 						<a href="#"><div class="secolo"><p>CROCE DIPINTA</p></div></a>
 					</div>
 					<div class="img-container">
-						<a href="#"><img src="Immagini opere e icone\MadonnaDelParadiso-MicheleDiMatteo.JPG" /></a>
+						<a href="#"><img src="Immagini opere e icone\MadonnaDelParadiso-MicheleDiMatteo.JPG" alt="Affresco staccato raffigurante la Madonna del Paradiso di Michele di Matteo nella Chiesa di Santo Stefano a Bologna"/></a>
 						<a href="#"><div class="secolo"><p>AFFRESCO STACCATO</p></div></a>
 					</div>
 					<div class="img-container">
-						<a href="#"><img src="Immagini opere e icone\Monumento-TaddeoPepoli.JPG" /></a>
+						<a href="#"><img src="Immagini opere e icone\Monumento-TaddeoPepoli.JPG" alt="Tomba di Taddeo Pepoli collocata nella chiesa di San Domenico a Bologna"/></a>
 						<a href="#"><div class="secolo"><p>MONUMENTO FUNEBRE</p></div></a>
 					</div>
 				</div>
 				<div class="immagini-row">
 					<div class="img-container">
-						<img src="Immagini opere e icone\Santo-diacono-maestro-campionese.JPG" />
+						<img src="Immagini opere e icone\Santo-diacono-maestro-campionese.JPG" alt="Santo diacono in pietra, scultura di un maestro campionese del XV secolo"/>
 						<a href="#"><div class="secolo"><p>SCULTURA</p></div></a>
 					</div>
 					<div class="img-container">
-						<a href="#"><img src="Immagini opere e icone\MadonnaDellaSalveRegina.JPG" /></a>
+						<a href="#"><img src="Immagini opere e icone\MadonnaDellaSalveRegina.JPG" alt="Icona della Madonna della Salve Regina della Chiesa di Santa Maria dei Servi"/></a>
 						<a href="#"><div class="secolo"><p>ICONA</p></div></a>
 					</div>
 					<div class="img-container">
-						<a href="#"><img src="Immagini opere e icone\Reliquiario-di-SanPetronio.JPG"/></a>
+						<a href="#"><img src="Immagini opere e icone\Reliquiario-di-SanPetronio.JPG" alt="Reliquiario di San Petronio realizzato da Jacopo Roseto conservato nella chiesa di Santo Stefano a Bologna"/></a>
 						<a href="#"><div class="secolo"><p>RELIQUIARIO</p></div></a>
 					</div>
 					<div class="img-container">
-						<a href="#"><img src="Immagini opere e icone\Lippo-Polittico-SMariaDeiServi.JPG" /></a>
+						<a href="#"><img src="Immagini opere e icone\Lippo-Polittico-SMariaDeiServi.JPG" alt="Madonna in trono con Bambino e santi di Lippo di Dalmasio in Santa Maria dei Servi a Bologna"/></a>
 						<a href="#"><div class="secolo"><p>POLITTICO</p></div></a>
 					</div>
 				</div>
@@ -152,29 +167,28 @@
 		</div>
 
 		<div class="footer">
-		<div class="footer-links">
-			<p><a href="#">Contatti</a></p>
-			<p>|</p>
-			<p><a href="#">About us</a></p>
-			<p>|</p>
-			<p><a href="#">Credits</a></p>
-			<p>|</p>
-			<p><a href="#">Licenze</a></p>
-			<p>|</p>
-			<p><a href="#">Web Poject Plan</a></p>
-		</div>
-		<div class="go-back-up">
-			<p><a href="#top-page" title="Vai all'inizio della pagina" class="clickable-container">Torna su</a></p>
-		</div>
+			
+			<div class="footer-links">
+				<p><a href="#">Contatti</a></p>
+				<p>|</p>
+				<p><a href="#">About us</a></p>
+				<p>|</p>
+				<p><a href="#">Credits</a></p>
+				<p>|</p>
+				<p><a href="#">Licenze</a></p>
+				<p>|</p>
+				<p><a href="Web-Project-Plan.html" target="_blank">Web Poject Plan</a></p>
+			</div>
+
+			<div class="go-back-up">
+				<p><a href="#top-page" title="Vai all'inizio della pagina" class="clickable-container">Torna su</a></p>
+			</div>
+
+			<p class="footer-bottom-text" style="padding-bottom: 8px;">Progetto realizzato per il corso Unibo di Informatica Umanistica a.a.2024/25</p>
 
 		
-	</div>
+		</div>
 
 	</body>
-
-
-
-
-
 
 </html>
