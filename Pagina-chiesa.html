@@ -25,11 +25,11 @@
 
 		<header class="header" id="top-page">
 
-			<a href="Index.html" class="logo"><img src="Immagini opere e icone\Icone e logo\Logo-sito.png"></a>
+			<a href="index.html" class="logo"><img src="Immagini opere e icone\Icone e logo\Logo-sito.png"></a>
 
 			<nav class="navbar">
 				<div class="navbar-left">
-					<a href="Index.html">Home</a>
+					<a href="index.html">Home</a>
 					<a href="Mappa-chiese.html">Mappa delle chiese</a>
 					<a href="Catalogo-opere.html">Catalogo opere</a>
 
@@ -413,22 +413,22 @@
 				const track = document.getElementById("sliderTrack"); 
 				const dotsContainer = document.getElementById("dotsContainer");
 				const slides = track.children;
-				let currentIndex = 0;
+				let currentindex = 0;
 
 				function updateSlider() {
-					track.style.transform = `translateX(-${currentIndex * 100}%)`;
+					track.style.transform = `translateX(-${currentindex * 100}%)`;
 					[...dotsContainer.children].forEach((dot, i) =>
-						dot.classList.toggle("active", i === currentIndex)
+						dot.classList.toggle("active", i === currentindex)
 					);
 				}
 
 				function prevSlide() {
-					currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+					currentindex = (currentindex - 1 + slides.length) % slides.length;
 					updateSlider();
 				}
 
 				function nextSlide() {
-					currentIndex = (currentIndex + 1) % slides.length;
+					currentindex = (currentindex + 1) % slides.length;
 					updateSlider();
 				}
 
@@ -437,7 +437,7 @@
 					const dot = document.createElement("div");
 					dot.classList.add("gallery-dot");
 					dot.addEventListener("click", () => {
-						currentIndex = i;
+						currentindex = i;
 						updateSlider();
 					});
 					dotsContainer.appendChild(dot);
