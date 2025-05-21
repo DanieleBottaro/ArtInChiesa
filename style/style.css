@@ -1174,12 +1174,8 @@ figcaption a{
 	color: white;
 }
 
-.first-card, .second-card{
+.first-card, .second-card, .third-card{
 	float: left;
-}
-
-.third-card{
-	float:left;
 }
 
 /*Mappa interattiva*/
