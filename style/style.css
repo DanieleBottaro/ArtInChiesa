@@ -486,7 +486,7 @@ figcaption a{
 }
 
 .filtri-attivi, .sortby {
-	display: inline-block;
+	display: inline;
 	height: fit-content;
 }
 
