@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html> 
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<title>Web Project Plan</title>
+
+		<link rel="icon" type="image/x-icon" href="Immagini opere e icone\Icone e logo\Logo-Sito-favicon.png">
+
+		<link rel="stylesheet" href="CSS/style.css">
+
+		<!--Metadati della pagina web-->
+		<link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"/>
+
+		<META NAME="DC.Title" content="ArtInChiesa"/>
+		<META name="DC.Creator" content="Daniele Bottaro"/>
+		<META name="DC.Subject" content="Opere d'arte tra XIII e XV secolo"/>
+		<META name="DC.Description" content="Catalogo delle opere realizzate tra XIII e XV secolo conservate all'interno delle chiese di Bologna"/>
+		<META name="DC.Publisher" content="Github Pages"/>
+		<META name="DC.Date" content="2025-05-21"/>
+		<META name="DC.Type" content="Catalogo web"/>
+		<META name="DC.Format" content="Sito web"/>
+		<META name="DC.Language" content="It"/>
+
+	</head>
+
+	<body>
+	
+		<header class="header" id="top-page">
+
+			<a href="Index.html" class="logo"><img src="Immagini opere e icone\Icone e logo\Logo-sito.png"></a>
+
+			<nav class="navbar">
+				<div class="navbar-left">
+					<a href="Index.html">Home</a>
+					<a href="Mappa-chiese.html">Mappa delle chiese</a>
+					<a href="Catalogo-opere.html">Catalogo opere</a>
+
+					<div class="dropdown">
+
+						<button class="dropbtn"><a class="droplink" href="#">Percorsi tematici</a></button>
+						<img src="Immagini opere e icone\Icone e logo\arrow_drop_down.svg">
+
+						<div class="dropdown-content">
+						  <a href="#">Gli spazi liturgici e le loro funzionalità</a>
+						  <a href="Percorso-tematico.html">Punzoni, graniture e stiletto: la materialità delle opere</a>
+						</div>
+					</div>
+										
+				</div>  
+				<div class="navbar-right">
+					<a href="#" id="contatti">Contatti</a>
+					<div class="dropdown">
+
+						<button class="dropbtn"><a class="droplink" href="#">IT</a></button>
+						<img src="Immagini opere e icone\Icone e logo\arrow_drop_down.svg">
+
+						<div class="dropdown-content">
+						  <a href="#">EN</a>
+						  <a href="#" style="color: #9e3a26">IT</a>
+						</div>
+					</div>
+					<a href="#"><img src="Immagini opere e icone\Icone e logo\Accesso-symbol.svg" style="margin-right: 3px;">Accedi</a>
+					
+					
+				</div>
+			</nav>
+
+		</header>
+
+
+		<div class="breadcrumbs">
+			<p><a href="Index.html">Home</a></p>
+			<p class="crumbs-separator"><strong>/</strong></p>
+			<p class="selected-crumb">Web Project Plan</p>
+		</div>
+
+            
+        <div class="webPrjctPln">
+
+            <h1>Web Project Plan</h1>
+
+            <h2>Indice</h2>
+
+            <ol class="listIndice">
+
+                <li><a href="#idea"><strong>Idea</strong></a></li>
+
+                <li><a href="#brief"><strong>Brief</strong></a></li>
+
+                <ol type="a">
+                    <li><a href="#finalità">Finalità e obiettivi del progetto</a></li>
+                    <li><a href="#pubblico">Pubblico di riferimento</a></li>
+                    <li><a href="#accesso">Accesso alla risorsa</a></li>
+                    <li><a href="#contenuti-dati">Modalità di raccolta dei contenuti e dei dati</a></li>
+                </ol>
+
+                <li><a href="#benchmark"><strong>Benchmark</strong></a></li>
+
+                <ol type="a">
+                    <li><a href="#analisi-mercato">Analisi di mercato</a></li>
+                    <li><a href="#descrizione-concorrenti">Descrizione dei concorrenti</a></li>
+                </ol>
+
+                <li><a href="#struttura"><strong>Struttura</strong></a></li>
+
+                <ol type="a">
+                    <li><a href="#mappa-contettuale">Mappa concettuale (modello E/R)</a></li>
+                    <li><a href="#schema-dipendenze">Schema delle dipendenze</a></li>
+                    <li><a href="#categorie-descrittive-opere">Categorie descrittive utilizzate per le opere e corrispettivo Dublin Core</a></li>
+					<li><a href="#categorie-descrittive-foto">Categorie descrittive utilizzate per le fotografie delle opere e corrispettivo Dublin Core</a></li>
+                </ol>
+
+				<li><a href="#layout"><strong>Layout</strong></a></li>
+
+				<ol type="a">
+					<li><a href="#wire-home">Wireframe homepage</a></li>
+					<li><a href="#wire-mappa-chiese">Wireframe pagina mappa delle chiese</a></li>
+					<li><a href="#wire-cat">Wireframe pagina catalogo</a></li>
+					<li><a href="#wire-percorso">Wireframe pagina percorso tematico</a></li>
+					<li><a href="#wire-chiesa">Wireframe pagina della chiesa</a></li>
+					<li><a href="#wire-item">Wireframe pagina item</a></li>
+				</ol>
+
+				<li><a href="#usabilità"><strong>Usabilità</strong></a></li>
+				
+				<ol type="a">
+					<li><a href="#architettura">Norme di usabilità per l'architettura</a></li>
+					<li><a href="#aspetto-tipografia">Norme di usabilità per aspetto e tipografia</a></li>
+					<li><a href="#colori-icone">Norme di usabilità per colori e icone</a></li>
+				</ol>
+
+				<li><a href="#servizi"><strong>Servizi</strong></a></li>
+
+				<ol type="a">
+					<li><a href="#strumenti-browsing">Strumenti di browsing</a></li>
+					<li><a href="#navigazione-interna">Strumenti di navigazione interna</a></li>
+					<li><a href="#interazione">Strumenti di interazione</a></li>
+					<li><a href="#integrativi">Strumenti di browsing integrativi</a></li>
+				</ol>
+
+				<li><a href="#bibliografia"><strong>Bibliografia e sitografia</strong></a></li>
+
+            </ol>
+
+			<div class="web-project-text">
+				<h2 id="idea">1. Idea</h2>
+				<p class="last-paragraph">Il progetto è un sito web che intende fornire una catalogazione delle opere artistiche realizzate tra l’inizio del Duecento e la fine del Quattrocento conservate all’interno delle chiese di Bologna. Gli utenti possono esplorare i contenuti tramite una mappa interattiva o un catalogo filtrabile. Ogni chiesa ha una pagina con storia, galleria fotografica, planimetria e opere collegate. È presente anche un esempio di percorso tematico trasversale. Il sito intende valorizzare e rendere accessibile questo patrimonio in modo semplice e navigabile.</p>
+
+				<h2 id="brief">2. Brief</h2>
+				<div class="sezione-indentata">
+
+					<h3 id="finalità">a. Finalità e obiettivi del progetto</h3>
+					<p class="last-paragraph">La risorsa intende fornire una rigorosa e sinora assente schedatura delle opere realizzate nell’arco di questi tre secoli presenti sul territorio bolognese, limitatamente alle chiese del centro città. All’interno del sito si troveranno una mappa di Bologna dalla quale è possibile visualizzare le chiese che conservano le opere di riferimento e un elenco delle stesse con una loro breve descrizione. Inoltre per ogni chiesa sarà presente una pagina di presentazione con una panoramica sulla storia dell’edificio,  dalla quale è possibile visualizzare le opere che sono presenti all’interno e individuarne l’esatta ubicazione attraverso marker visivi disposti sulla planimetria dell’edificio ecclesiastico.</p>
+
+					<h3 id="pubblico">b. Pubblico di riferimento</h3>
+					<p class="last-paragraph">Il target di riferimento sono studenti della materia e appassionati, i quali disporrebbero così di uno strumento in grado di offrire una panoramica chiara, accessibile e completa delle opere realizzate in quei secoli e della loro disseminazione all’interno della moltitudine di chiese bolognesi. La risorsa è però rivolta anche verso un pubblico più generalista per informarlo sulla ricchezza artistica della città e indirizzarlo verso luoghi non musealizzati che possano interessarlo dal punto di vista artistico e che spesso possano contenere opere d’arte definite “in situ”, cioè conservate nel luogo per il quale sono state concepite. L’importanza del patrimonio artistico conservato negli edifici ecclesiastici del centro città verrà delineato per il pubblico più ampio da brevi descrizioni delle opere e cenni storici sulle chiese atte a stimolarne l’interesse, l’approfondimento e una lettura e comprensione contestuale del manufatto artistico.</p>
+
+					<h3 id="accesso">c. Accesso alla risorsa</h3>
+					<p class="last-paragraph">La risorsa è principalmente pensata per una fruizione da computer e tablet per una migliore visualizzazione del contenuto, ma sarà disponibile anche un accesso da mobile per permettere agli utenti di consultare il sito quando si trovano nei luoghi di conservazione delle opere o nelle loro prossimità.</p>
+
+					<h3 id="contenuti-dati">d. Modalità di raccolta dei contenuti e dei dati</h3>
+					<p class="last-paragraph">L’interezza delle immagini mostrate di chiese ed opere sono realizzate appositamente per il progetto e sottostanno alle caratteristiche della licenza CC-BY 4.0, che ne permette il riutilizzo illimitato fermo restando la corretta attribuzione all’autore della paternità dell’opera. Le icone e i simboli, riutilizzabili liberamente, sono tratti da Google fonts. Il contenuto informativo sarà fornito sulla base delle fonti che verranno citate in bibliografia.</p>
+				</div>
+
+				<h2 id="benchmark">3. Benchmark</h2>
+				<div class="sezione-indentata">
+
+					<h3 id="analisi-mercato">a. Analisi di mercato</h3>
+					<p class="last-paragraph">Attualmente non esiste una piattaforma online che offra un'esplorazione completa, strutturata e visivamente accessibile delle opere d’arte custodite nelle chiese di Bologna, con un focus preciso sul periodo compreso tra il XIII e il XV secolo. Le risorse esistenti si limitano spesso a contenuti parziali: le piattaforme istituzionali offrono informazioni frammentarie o tecniche (più riferite alle fotografie delle opere che alle opere stesse), mentre i siti turistici si concentrano sugli edifici più noti, senza offrire una reale struttura di consultazione per le opere nel loro insieme. Il progetto colma questa lacuna proponendo un'esplorazione integrata per luogo, opera e temi trasversali, con strumenti di browsing come mappe interattive, faccette di filtraggio, gallerie fotografiche, planimetrie e percorsi tematici. Il sito risponde a un’esigenza reale di valorizzazione del patrimonio "diffuso", spesso poco documentato o difficilmente fruibile da remoto, offrendo un’esperienza chiara anche per un pubblico non specialista, senza sacrificare la qualità delle informazioni.</p>
+
+					<h3 id="descrizione-concorrenti">b. Descrizione dei concorrenti</h3>
+					<p>Vengono qui presi in esame 2 competitor rilevanti dai quali ho tratto spunti per quanto riguarda gli aspetti positivi qui di seguito descritti: <a href="https://beweb.chiesacattolica.it/">BeWeb</a> e il sito web di <a href="https://www.guidobarbi.it/">Guido Barbi</a>, in particolare la pagina <a href="https://www.guidobarbi.it/nelle-chiese-di-bologna-un-museo-permanente/">Una Pinacoteca diffusa nelle Chiese di Bologna</a>:</p>
+
+					<ul>
+						<li><p>BeWeb – Beni Ecclesiastici in Web è una piattaforma che si distingue per l’ampiezza del suo database e per il rigore con cui vengono presentate le informazioni. Il sito raccoglie dati standardizzati relativi a un numero molto esteso di opere provenienti da tutto il territorio nazionale, offrendo un sistema di filtri estremamente articolato. È possibile infatti navigare le schede per tipologia dell’opera, periodo storico, autore, ambito tematico, funzione liturgica o materiali impiegati, rendendo l’esperienza di ricerca molto personalizzabile.</p>
+						<p>Dal punto di vista della navigazione, il sito consente un accesso multilivello ai contenuti: l’utente può esplorare le opere a partire dall’edificio in cui sono conservate, dal nome dell’artista, dall’ente proprietario o da soggetti iconografici ricorrenti. Le schede descrittive risultano piuttosto dettagliate e sono arricchite da metadati. Un ulteriore punto di forza è rappresentato dalla varietà di modalità di visualizzazione offerte: è possibile infatti consultare gli oggetti in forma di griglia, elenco testuale, mappa geografica o cronologia temporale.</p>
+						<p>Tuttavia, non mancano alcune criticità. In particolare, sono assenti molti edifici ecclesiali (il comune di Bologna ne conta appena quattro) e in alcuni di questi sono assenti gran parte delle opere che custodiscono. Inoltre la fruizione da dispositivi mobili risulta poco ottimizzata, aspetto che può penalizzare l’utilizzo in situ o durante la visita ai luoghi di conservazione. Anche la mappa interattiva, sebbene presente, tende a essere poco funzionale quando si confronta con l’elevata mole di oggetti catalogati: l’interazione con i filtri, in particolare, risulta complessa e poco fluida, rendendo difficile una consultazione mirata.</p></li>
+						<li><p>Un altro esempio significativo, seppur con caratteristiche molto diverse, è rappresentato dal lavoro di Guido Barbi, autore di una raccolta fotografica intitolata Una Pinacoteca diffusa nelle Chiese di Bologna, che qui prendiamo in esame per la puntualità dell’argomento seppur le stesse considerazioni si possono fare su molte altre pagine del suo sito. Si tratta di un progetto personale che si distingue per l’alta qualità visiva e la cura nella presentazione delle immagini, realizzate in modo professionale e pensate per restituire non solo l’opera d’arte, ma anche il suo contesto originario. La forza di questo sito risiede proprio nella sensibilità narrativa e fotografica con cui viene raccontato il patrimonio artistico bolognese.</p>
+						<p>Nonostante queste qualità, il progetto presenta però alcuni limiti dal punto di vista dell’usabilità e dell’organizzazione dei contenuti. Trattandosi di un sito personale, risulta difficilmente raggiungibile e privo di elementi interattivi. Le opere non sono consultabili attraverso un sistema strutturato di navigazione: mancano filtri, motori di ricerca e connessioni logiche tra i contenuti. Inoltre, non è presente una mappa né strumenti che permettano di localizzare le chiese o di orientarsi nel territorio. Anche dal punto di vista descrittivo, l’assenza di metadati standardizzati e di una copertura omogenea delle chiese e delle opere rende l’esperienza più simile a una narrazione soggettiva che a un vero e proprio strumento di ricerca.</p></li>
+					</ul>
+				</div>
+
+				<h2 id="struttura">4. Struttura</h2>
+				<div class="sezione-indentata mappe">
+					<h3 id="mappa-concettuale">a. Mappa concettuale (modello E/R)</h3>
+					<img src="Immagini opere e icone\Wireframe e mappe\Modello-E-R.png"/>
+					<p class="last-paragraph">Questo diagramma rappresenta graficamente esempi di entità, relazioni e attributi che costituiscono il sito. Partendo dal livello item, cioè della singola opera: gli attributi che la descrivono sono la data di creazione, la tecnica con la quale è stata realizzata, un ID, le misure dell’oggetto, e il tipo di manufatto. L’opera appartiene a un periodo preciso (ai secoli presi in considerazione dalla risorsa web), cioè dal XII alla fine del XV secolo, è realizzata da un artista (del quale vengono fornite le date di nascita e di morte, il nome e il nome completo). L’opera inoltre raffigura un soggetto, il quale può essere condiviso con altre opere. L’item è presentato da una breve descrizione, con la quale è fornita la bibliografia utilizzata e possibili spunti di approfondimento. L’oggetto artistico è conservato in una chiesa che si trova a Bologna, per la quale sono forniti un indirizzo, dei cenni storici e la bibliografia riferimento, ma anche una rappresentazione della planimetria che indichi la collocazione dell’opera all’interno dell’edificio. L’opera, inoltre, è riprodotta da una o più fotografie, delle quali viene indicato l’autore, la data di creazione, il formato, l’autore dell’opera fotografata e la licenza d’uso.</p>
+
+					<h3 id="schema-dipendenze">b. Schema delle dipendenze</h3>
+					
+					<img src="Immagini opere e icone\Wireframe e mappe\schema-dipendenze.png"/>
+					<p class="last-paragraph">Dallo schema delle dipendenze si intuisce come la homepage ricopra un ruolo più importante delle altre pagine e dalla quale è possibile appunto accedere alle pagine di secondo livello, tutte comunque presenti nella barra di navigazione. La pagina della mappa delle chiese presenta una mappa dalla quale è possibile avere una visione d'insieme delle chiese di Bologna e si può accedere alla pagina della singola chiesa sia attraverso i popup che appaiono cliccando sui marker che dalla sezione a sinistra, che mostra le card delle chiese con un'anteprima del testo della storia dell'edificio e tre delle opere custodite all'interno. Il catalogo delle opere offre una visione di tutte le opere della collezione, ed è possibile selezionare le opere che si vogliono visualizzare a schermo mediante il sistema di filtri presente nella sidebar. Per aumentare l'accessibilità è prevista la possibilità di cambiare lingua con la quale navigare il sito. Nella pagina dei percorsi tematici si può scegliere il percorso che si vuole esplorare (accessibile anche tramite il dropdown menu della navbar). All'interno del percorso vengono proposti approfondimenti che mettono in relazione opere che si trovano anche in diverse chiese del centro città e dal quale è possibile accedere sia alla pagina dell'item che a quelle delle chiese che conservano le opere prese in esame. Inoltre è fornita la possibilità di iscriversi per accedere all'area personale, mediante la quale è possibile accedere alle opere salvate nelle raccolte personali.</p>
+
+
+					<h3 id="categorie-descrittive-opere">c. Categorie descrittive utilizzate per le opere e corrispettivo Dublin Core</h3>
+					<ul>
+						<li><strong>Autore</strong>: dc.creator;</li>
+						<li><strong>Datazione opera (indicazione generica)</strong>: dc.date;</li>
+						<li><strong>Datazione opera (estremi cronologici)</strong>: dc.date;</li>
+						<li><strong>Tecnica</strong>: dc.format;</li>
+						<li><strong>Luogo di conservazione</strong>: dc.coverage;</li>
+						<li><strong>Collocazione nella chiesa</strong>: dc.coverage;</li>
+						<li><strong>Misure</strong>: dc.format;</li>
+						<li><strong>Tipologia dell’oggetto</strong>: dc.type;</li>
+						<li><strong>Soggetto</strong>: dc.subjec;</li>
+						<li><strong>Bibliografia</strong>: dc.source</li>
+					</ul>
+					<h3 id="categorie-descrittive-foto">d. Categorie descrittive utilizzate per le fotografie delle opere e corrispettivo Dublin Core</h3>
+					<ul>
+						<li><strong>Autore</strong>: dc.creator;</li>
+						<li><strong>Data</strong>: dc.date;</li>
+						<li><strong>Soggetto</strong>: dc.subject;</li>
+						<li><strong>Autore opera fotografata</strong>: dc.contributor;</li>
+						<li><strong>Formato</strong>: dc.format;</li>
+						<li><strong>Licenze d’uso</strong>: dc.rights</li>
+					</ul>
+				</div>
+
+				<h2 id="layout">5. Layout</h2>
+				<div class="sezione-indentata wireframe">
+					<h3 id="wire-home">a. Wireframe homepage</h3>
+					<img src="Immagini opere e icone\Wireframe e mappe\Wireframe-homepage.jpg"/>
+					<h3 id="wire-mappa-chiese">b. Wireframe pagina mappa delle chiese</h3>
+					<img src="Immagini opere e icone\Wireframe e mappe\Wireframe-mappa.jpg" style="width: 80%; display: block; margin: 30px auto;">
+					<h3 id="wire-cat">c. Wireframe pagina catalogo</h3>
+					<img src="Immagini opere e icone\Wireframe e mappe\Wireframe-catalogo.jpg"/>
+					<h3 id="wire-percorso">d. Wireframe pagina percorso tematico</h3>
+					<img src="Immagini opere e icone\Wireframe e mappe\Wireframe-percorso.jpg"/>
+					<h3 id="wire-chiesa">e. Wireframe pagina della chiesa</h3>
+					<img src="Immagini opere e icone\Wireframe e mappe\Wireframe-chiesa.jpg"/>
+					<h3 id="wire-item">f. Wireframe pagina item</h3>
+					<img src="Immagini opere e icone\Wireframe e mappe\Wireframe-item.jpg"/>
+				</div>
+
+				<h2 id="usabilità">6. Usabilità</h2>
+				<div class="sezione-indentata">
+					<h3 id="architettura">a. Norme di usabilità per l'architettura</h3>
+					<p>L’architettura del sito è stata progettata per supportare un'esperienza utente fluida e coerente, incentrata sull’esplorazione sia spaziale sia tematica delle opere artistiche. La navigazione principale è affidata a una navbar standard nelle pagine e resa sticky nella sezione “Mappa delle chiese” per consentire un accesso rapido agli strumenti di consultazione durante la navigazione verticale nella lista degli edifici ecclesiastici. In questa pagina, la visualizzazione è suddivisa in due aree funzionali: una mappa interattiva a destra con chiese geolocalizzate e una colonna a sinistra contenente le card delle chiese, navigabile in scroll.</p>
+					<p>Per facilitare l’orientamento dell’utente, è stato implementato un sistema di breadcrumbs, presente in tutte le sezioni del sito ad eccezione della homepage. I menu a tendina nella navbar consentono la selezione di percorsi tematici e della lingua (italiano o inglese), promuovendo una navigazione personalizzata. Le pagine delle chiese presentano una struttura a blocchi chiara e ricorrente: dopo titolo e hero image, nella metà sinistra sono presenti storia della chiesa (con funzione “leggi di più”) e l’elenco delle opere custodite, mentre nella metà di destra la galleria fotografica e la planimetria con marker interattivi per la localizzazione delle opere, la quale si affianca all’elenco delle opere conservate nella chiesa.</p>
+					<p class="last-paragraph">Le pagine delle opere sono organizzate in modo modulare: carosello principale con l’immagine dell’opera, galleria secondaria con anteprime cliccabili, e sistema a tab per accedere a dati tecnici, metadati, descrizione e approfondimenti. In fondo alla pagina è presente una sezione di esplorazione delle opere correlate, per incentivare una navigazione trasversale tra gli oggetti. La presenza di un bottone “Torna su” nel footer garantisce la facilità di ritorno all’inizio della pagina nelle sezioni più dense.</p>
+
+					<h3 id="aspetto-tipografia">b. Norme di usabilità per aspetto e tipografia</h3>
+					<p>Il sito adotta uno stile visivo sobrio ed equilibrato, che cerca di valorizzare le opere presentate senza sovraccaricare l’interfaccia. L’impianto tipografico è costruito con il font Poppins, appartenente alla famiglia Sans Serif: un font che garantisce pulizia visiva, leggibilità anche da dispositivi mobili, e una resa visiva pulita e accessibile.</p>
+					<p>Le gerarchie testuali sono gestite attraverso l’utilizzo coerente dei tag semantici HTML. Pur non seguendo uno schema tipografico rigido, le dimensioni sono state assegnate in modo coerente rispetto al contesto e alla funzione comunicativa di ciascun elemento.</p>
+					<p>Gli elementi interattivi (come pulsanti, link e card cliccabili) sono sempre riconoscibili visivamente, grazie a effetti di hover che ne modificano colore, sfondo o zoom, a seconda del contesto. Ogni elemento cliccabile (link e bottoni) è inoltre dotato dell’attributo title, per fornire all’utente un’indicazione chiara e accessibile della funzione associata al click.</p>
+					<p class="last-paragraph">Nel complesso, l’interfaccia cerca di offrire un’esperienza visiva coerente, mantenendo un equilibrio tra funzionalità e attenzione alla leggibilità dei contenuti.</p>
+
+					<h3 id="colori-icone">c. Norme di usabilità per colori e icone</h3>
+					<p>La scelta cromatica del sito è stata ispirata da riferimenti storico-artistici legati alla produzione pittorica tra il XIII e il XV secolo. In particolare, è stato adottato un tono caldo e desaturato di beige dorato (#e4dbbe) per gli sfondi e alcuni titoli, ispirato alla resa delicata della foglia d’oro nei dipinti medievali, ma anche evocativo dei toni degli incarnati delle figure dipinte del periodo. Questa scelta contribuisce a creare un’atmosfera coerente con i contenuti artistici presentati, offrendo una base visiva sobria ma suggestiva.</p>
+					<p>A questo si affianca un colore simile alla terracotta (#9e3a26), pensato per evocare le velature rosse di vernice stese sopra la foglia d’argento, e allo stesso tempo in grado di richiamare l’identità cromatica di Bologna e le tonalità calde tipiche dell’arte sacra soprattutto tre e quattrocentesca.</p>
+					<p>Colori neutri come il nero e il bianco completano la palette visiva: il nero è impiegato nella navbar, negli sfondi di alcuni box e nei pulsanti “scopri” delle card, mentre il bianco viene utilizzato per il testo su sfondo scuro, assicurando un buon contrasto e una leggibilità ottimale. Alcuni elementi sono ulteriormente messi in risalto tramite ombre leggere, impiegate per dare profondità e separazione visiva a componenti come le card e la sidebar.</p>
+					<p class="last-paragraph">L’uso delle icone è essenziale e puntuale: include frecce di navigazione nelle gallerie di immagini, il simbolo associato alla voce “Accedi” nella navbar, i simboli “+” per espandere i filtri nella sidebar e le frecce nei menu a tendina della navbar, a indicare la presenza di opzioni selezionabili. Questa scelta favorisce la chiarezza dell’interfaccia, mantenendola sobria, funzionale e coerente con l’identità visiva generale del sito.</p>
+				</div>
+
+				<h2 id="servizi">7. Servizi</h2>
+				<div class="sezione-indentata">
+
+					<h3 id="strumenti-browsing">a. Strumenti di browsing</h3>
+					<p>Per facilitare l'esplorazione e l'organizzazione dei contenuti, sono stati implementati diversi sistemi di browsing:</p>
+					<ul>
+						<li><strong>Faccette</strong>: nella pagina catalogo sono presenti filtri per secolo, autore, soggetto e tecnica;</li>
+						<li><strong>Maschere di ricerca</strong>: disponibili nella homepage (per opere o chiese) e nella pagina mappa (per cercare la chiese);</li>
+						<li><strong>Collegamenti interni cliccabili</strong> tra keyword correlate (autori, soggetti, edifici e tipi di oggetti): permettono una navigazione orizzontale non lineare tra contenuti connessi</li>
+					</ul>
+
+					<h3 id="navigazione-interna">b. Strumenti di navigazione interna</h3>
+					<p>Per orientarsi all'interno del sito e tornare facilmente ai livelli superiori:</p>
+					<ul>
+						<li><strong>Navbar principale</strong>;</li>
+						<li><strong>Sticky navbar</strong> nella pagina della mappa delle chiese;</li>
+						<li><strong>Breadcrumbs</strong> (in tutte le pagine, tranne la homepage);</li>
+						<li><strong>Pulsante "Torna su"</strong> nel footer;</li>
+						<li><strong>Pagination</strong> nel catalogo (navigazione per numero di pagina Google-like)</li>
+					</ul>
+
+					<h3 id="interazione">c. Strumenti di interazione</h3>
+					<p>Sono stati utilizzati numerosi componenti interattivi per migliorare la user experience:</p>
+					<ul>
+						<li><strong>Card</strong> usate per le opere e le chiese;</li>
+						<li><strong>Dropdown</strong> per la lingua e i percorsi tematici nella navbar, con icone delle frecce per segnalare la presenza del dropdown;</li>
+						<li><strong>Tabs</strong> nella pagina dell'opera è presente per separare dati, metadati completi e descrizione;</li>
+						<li><strong>Finestra modale</strong> per visualizzare le immagini a schermo pieno nella pagina item;</li>
+						<li><strong>Slideshow / Carousel</strong> per sfogliare le immagini dell'opera e della chiesa;</li>
+						<li><strong>Tooltip e attributi title</strong> su pulsanti e link per migliorare la comprensione e l'accessibilità;</li>
+						<li><strong>Accordion</strong> nei filtri della sidebar nella pagina catalogo per far esplodere la relativa sezione dei filtri;</li>
+						<li><strong>Custom select menu</strong> per l'ordinamento nel catalogo opere;</li>
+						<li><strong>Image overlay, image slide e zoom</strong> come effetti al passaggio del mouse;</li>
+						<li><strong>Transparent text over image</strong> nel box per scoprire i percorsi tematici all'interno della pagina catalogo e <strong>tab gallery</strong> nella pagina item per esplorare le immagini dell'opera</li>
+					</ul>
+
+					<h3 id="integrativi">c. Strumenti di browsing integrativi</h3>
+					<p>Accanto alla navigazione classica, il sito integra strumenti che supportano un’esplorazione più libera come le mappe interattive di Leaflet (nella pagina generale delle chiese) oppure la mappa interattiva StoryMapJS di KnightsLab (nella pagina del percorso tematico).</p>
+					<p class="last-paragraph">Si potrebbero integrare un tour virtuale delle chiese per comprendere meglio la collocazione delle opere nello spazio e per un maggiore coinvolgimento dell’utente. Inoltre si potrebbe implementare una visualizzazione delle opere alternativa al catalogo, magari tramite l’utilizzo di una linea del tempo, cosicché si possa avere un’indicazione della successione cronologica delle opere della collezione, sebbene in molti casi l’ampio margine di anni in cui un’opera può essere stata realizzata renderebbe certamente difficile tale rappresentazione grafica.</p>
+				</div>
+
+				<h2 id="bibliografia">8. Bibliografia/Sitografia</h2>
+				<ul>
+					<li>Codice HTML e CSS scritto con <a href="https://code.visualstudio.com/">Visual Studio Code</a>;</li>
+					<li>Wireframe realizzati con <a href="https://miro.com/it/">Miro</a>;</li>
+					<li>Mappa interattiva del percorso tematico realizzata con <a href="https://storymap.knightlab.com/">StoryMapJS</a> di <a href="https://knightlab.northwestern.edu/">Knightlab</a>;</li>
+					<li>Mappa delle dipendenze e mappa concettuale con <a href="https://app.diagrams.net/">Diagrams.net</a>;</li>
+					<li>Logo relizzato con <a href="https://www.adobe.com/it/products/photoshop.html">Adobe Photoshop</a>;</li>
+					<li>Sito pubblicato con <a href="https://pages.github.com/">Github Pages</a>;</li>
+					<li>Icone e simboli tratti da <a href="https://fonts.google.com/icons">Google Fonts</a>;</li>
+					<li>La mappa che mostra la localizzazione di tutte le chiese è incorporata tramite <a href="https://leafletjs.com/">Leaflet</a>;</li>
+					<li>La mappa che mostra la localizzazione della singola chiesa è incorporata tramite Google Maps;</li>
+					<li>I testi informativi della descrizione dell’opera nella pagina item e della storia della chiesa presa in esempio sono — così come tutte le immagini delle opere d’arte e delle chiese — originali e create apposta per il sito. Le fonti di ogni testo sono citate nella bibliografia di riferimento.</li>
+				</ul>
+			</div>
+        </div>
+		
+
+		<!--FINE CODICE CORRELATI-->
+
+		<div class="footer">
+			<div class="footer-links">
+				<p><a href="#">Contatti</a></p>
+				<p>|</p>
+				<p><a href="#">About us</a></p>
+				<p>|</p>
+				<p><a href="#">Credits</a></p>
+				<p>|</p>
+				<p><a href="#">Licenze</a></p>
+				<p>|</p>
+				<p><a href="#">Web Poject Plan</a></p>
+			</div>
+			<div class="go-back-up">
+				<p><a href="#top-page" title="Vai all'inizio della pagina" class="clickable-container">Torna su</a></p>
+			</div>
+			<p class="footer-bottom-text" style="padding-bottom: 8px;">Progetto realizzato per il corso Unibo di Informatica Umanistica a.a.2024/25</p>
+		</div>
+
+
+	</body>
+
+
+</html>

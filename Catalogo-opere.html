@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="it">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<title>Catalogo opere</title>
+
+		<link rel="icon" type="image/x-icon" href="Immagini opere e icone\Icone e logo\Logo-Sito-favicon.png">
+
+		<!--<link rel="stylesheet" href="CSS/Catalogo-opere.css"/>-->
+		<link rel="stylesheet" href="CSS/style.css"/>
+
+		<!--Metadati della pagina web-->
+		<link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"/>
+
+		<META NAME="DC.Title" content="ArtInChiesa"/>
+		<META name="DC.Creator" content="Daniele Bottaro"/>
+		<META name="DC.Subject" content="Opere d'arte tra XIII e XV secolo"/>
+		<META name="DC.Description" content="Catalogo delle opere realizzate tra XIII e XV secolo conservate all'interno delle chiese di Bologna"/>
+		<META name="DC.Publisher" content="Github Pages"/>
+		<META name="DC.Date" content="2025-05-21"/>
+		<META name="DC.Type" content="Catalogo web"/>
+		<META name="DC.Format" content="Sito web"/>
+		<META name="DC.Language" content="It"/>
+
+  	</head>
+	<body>
+
+		<header class="header" id="top-page">
+
+			<a href="Index.html" class="logo"><img src="Immagini opere e icone\Icone e logo\Logo-sito.png"></a>
+
+			<nav class="navbar">
+				<div class="navbar-left">
+					<a href="Index.html">Home</a>
+					<a href="Mappa-chiese.html">Mappa delle chiese</a>
+					<a href="Catalogo-opere.html" style="color: #9e3a26;">Catalogo opere</a>
+
+					<div class="dropdown">
+
+						<button class="dropbtn"><a class="droplink" href="#">Percorsi tematici</a></button>
+						<img src="Immagini opere e icone\Icone e logo\arrow_drop_down.svg">
+
+						<div class="dropdown-content">
+						  <a href="#">Gli spazi liturgici e le loro funzionalità</a>
+						  <a href="Percorso-tematico.html">Punzoni, graniture e stiletto: la materialità delle opere</a>
+						</div>
+					</div>
+										
+				</div>  
+				<div class="navbar-right">
+					<a href="#" id="contatti">Contatti</a>
+					<div class="dropdown">
+
+						<button class="dropbtn"><a class="droplink" href="#">IT</a></button>
+						<img src="Immagini opere e icone\Icone e logo\arrow_drop_down.svg">
+
+						<div class="dropdown-content">
+						  <a href="#">EN</a>
+						  <a href="#" style="color: #9e3a26">IT</a>
+						</div>
+					</div>
+					<a href="#"><img src="Immagini opere e icone\Icone e logo\Accesso-symbol.svg" style="margin-right: 3px;">Accedi</a>
+					
+					
+				</div>
+			</nav>
+
+		</header>
+
+		<div class="topmain">
+
+			<div class="breadcrumbs">
+				<p><a href="Index.html">Home</a></p>
+				<p class="crumbs-separator"><strong>/</strong></p>
+				<p class="selected-crumb">Catalogo opere</p>
+			</div>
+
+			<!--FILTRI ATTIVI-->
+			<div class="filtri-sortby">
+				<div class="filtri-attivi">
+					<h3>Filtri attivi:</h3>
+					<p>Croce dipinta <span title="Rimuovi il filtro" onclick="this.parentElement.style.display='none'">x</span></p>
+					<p>XIV secolo <span title="Rimuovi il filtro" onclick="this.parentElement.style.display='none'">x</span></p>
+					<p>XV secolo <span title="Rimuovi il filtro" onclick="this.parentElement.style.display='none'">x</span></p>
+					<p>Basilica di San Domenico <span title="Rimuovi il filtro" onclick="this.parentElement.style.display='none'">x</span></p>
+				</div>
+
+				<div class="sortby">
+					<h3>Ordina per:</h3>
+					<select>
+					  <option>Data (dal più recente)</option>
+					  <option>Data (dal più antico)</option>
+					  <option>Ordine alfabetico (A-Z)</option>
+					  <option>Ordine alfabetico (Z-A)</option>
+					</select>
+				  </div>
+			</div>
+
+
+			<!--FINE FILTRI ATTIVI-->
+		</div>
+		
+
+		<div class="main">
+
+			
+	
+			<!--SIDEBAR-->
+			<!-- Contenitore per i filtri -->
+
+			<div class="filter-container" id="sidebar">
+
+    			<h2 id="sidebar-title">FILTRA LE OPERE</h2>
+	
+				<button class="accordion"><h3>Per Artista</h3></button>
+				<div class="panel">
+					<div class="artist-filter-section">
+						<label><input type="checkbox"> Lippo di Dalmasio</label><br>
+						<label><input type="checkbox"> Cimabue</label><br>
+						<label><input type="checkbox"> Michele di Matteo</label><br>
+						<label title="Anonimo bolognese sec. XIV/XV"><input type="checkbox"> Anonimo bolognese sec. XIV/XV</label><br>
+						<label><input type="checkbox"> Giunta Pisano</label><br>
+						<label><input type="checkbox"> Alfonso Lombardi</label><br>
+						<label><input type="checkbox"> Iacopo Roseto</label><br>
+						<label><input type="checkbox"> Simone dei Crocifissi</label><br>
+						<label><input type="checkbox"> Niccolò dell'Arca</label><br>
+						<label><input type="checkbox"> Jacopo di Paolo</label><br>
+						<label><input type="checkbox"> Vitale da Bologna</label><br>
+						<label><input type="checkbox"> Baccio da Montelupo</label><br>
+					</div>
+				</div>
+	
+				
+				<button class="accordion"><h3>Per Periodo</h3></button>
+				<div class="panel">
+					<label><input type="checkbox"> XII secolo</label><br>
+					<label><input type="checkbox"> XIII secolo</label><br>
+					<label><input type="checkbox"> XIV secolo</label><br>
+					<label><input type="checkbox"> XV secolo</label><br>
+					<label><input type="checkbox"> XVI secolo</label><br>
+				</div>  
+	
+				<button class="accordion"><h3>Per Chiesa</h3></button>
+				<div class="panel">
+					<label><input type="checkbox"> Basilica di San Petronio</label><br>
+					<label title="Basilica di Santa Maria dei Servi"><input type="checkbox"> Basilica di Santa Maria dei Servi</label><br>
+					<label><input type="checkbox"> Chiesa di San Martino</label><br>
+					<label><input type="checkbox"> Basilica di San Domenico</label><br>
+				</div>
+	
+				<button class="accordion"><h3>Per Tipologia</h3></button>
+				<div class="panel">
+					<label><input type="checkbox"> Affresco staccato</label><br>
+					<label><input type="checkbox"> Polittico</label><br>
+					<label><input type="checkbox"> Monumento funebre</label><br>
+					<label><input type="checkbox"> Icona</label><br>
+					<label><input type="checkbox"> Pala d'altare</label><br>
+					<label><input type="checkbox"> Croce dipinta</label><br>
+					<label><input type="checkbox"> Reliquiario</label><br>
+				</div>  
+
+				<div class="filtri-buttons">
+					<p class="bottone-filtri"><strong>Applica i filtri</strong></p>
+					<p class="rimuovi-filtri"><strong>Rimuovi i filtri</strong></p>
+				</div>
+			</div>
+	
+			<!--FINE SIDEBAR-->
+
+			<!-- Contenitore per gli articoli -->
+
+			<!--Contenitore delle opere-->
+			<div class="container">
+				<!--Prima fila composta da tre-->
+				<div class="card-row">
+
+					<!--Prima Opera-->
+					<a href="Pagina-item.html" title="Vai alla pagina dell'opera">
+
+						<div class="card-opera first-card">
+
+							<div class="card-image">
+								<img id="cardImg" src="Immagini opere e icone\Crocefisso-Giunta.jpg" alt="Crocefisso di Giunta Pisano in San Domenico a Bologna"/>
+							</div>
+
+							<div class="card-description">
+								<h2>Giunta Pisano</h2>
+								<p><em>Crocifissione</em>, 1250-55</p>           
+							</div>
+
+							<div class="bottone-scopri">
+								<span>SCOPRI</span>
+							</div>          
+						</div>
+					</a>
+
+					<!--Seconda Opera-->
+					<a href="#" title="Vai alla pagina dell'opera">
+						<div class="card-opera second-card">
+
+							<div class="card-image">
+								<img src="Immagini opere e icone\Arca-Domenico-cat.jpg" alt="Particolare dell'Arca di San Domenico"/>
+							</div>
+
+							<div class="card-description">
+								<h2>Niccolò dell’Arca, Nicola Pisano</h2>
+								<p><em>Arca di San Domenico</em>, XIII-XV secolo</p>           
+							</div>
+
+							<div class="bottone-scopri" style="bottom: 11px;">
+								<a href="#"><span>SCOPRI</span></a>
+							</div> 
+						</div>
+					</a>
+
+					<!--Terza Opera-->
+					<a href="#" title="Vai alla pagina dell'opera">
+
+						<div class="card-opera third-card">
+
+							<div class="card-image">
+								<img src="Immagini opere e icone\Monumento-Pepoli-cat.jpg" alt="Tomba di Taddeo Pepoli collocata nella chiesa di San Domenico a Bologna"/>
+							</div>
+
+							<div class="card-description">
+								<h2>Scultore toscano (?)</h2>
+								<p><em>Tomba di Taddeo Pepoli</em>, seconda metà XIV secolo</p>           
+							</div>
+
+							<div class="bottone-scopri">
+								<a href="#"><span>SCOPRI</span></a>
+							</div> 
+						</div>
+					</a>
+				</div>
+
+				<!--Fine prima fila, inizio seconda-->
+
+				<div class="card-row">
+
+					<!--Prima Opera-->
+					<a href="#" title="Vai alla pagina dell'opera">
+
+						<div class="card-opera first-card">
+
+							<div class="card-image">
+								<img src="Immagini opere e icone\Michele-di-Matteo-affresco.jpg" alt="Affresco staccato di Michele di Matteo raffigurante San Petronio in cattedra e storie"/>
+							</div>
+
+							<div class="card-description">
+								<h2>Michele di Matteo</h2>
+								<p><em>San Petronio in cattedra e storie</em>, metà XV secolo</p>           
+							</div>
+
+							<div class="bottone-scopri">
+								<a href="#"><span>SCOPRI</span></a>
+							</div>          
+						</div>
+					</a>
+
+					<!--Seconda Opera-->
+					<a href="#" title="Vai alla pagina dell'opera">
+
+						<div class="card-opera second-card">
+
+							<div class="card-image">
+								<img src="Immagini opere e icone\Reliquiario-di-SanPetronio.jpg" alt="Reliquiario di San Petronio realizzato da Jacopo Roseto conservato nella chiesa di Santo Stefano a Bologna"/>
+							</div>
+
+							<div class="card-description">
+								<h2>Iacopo Roseto</h2>
+								<p><em>Reliquiario di San Petronio</em>, 1380</p>           
+							</div>
+
+							<div class="bottone-scopri">
+								<a href="#"><span>SCOPRI</span></a>
+							</div> 
+						</div>
+					</a>
+
+					<!--Terza Opera-->
+					<a href="#" title="Vai alla pagina dell'opera">
+
+						<div class="card-opera third-card">
+
+							<div class="card-image">
+								<img src="Immagini opere e icone\Maesta-Cimabue.jpg" alt="Maestà di Cimabue in Santa Maria dei Servi a Bologna"/>
+							</div>
+
+							<div class="card-description">
+								<h2>Cimabue e aiuti</h2>
+								<p><em>Maestà</em>, 1280-1285</p>           
+							</div>
+
+							<div class="bottone-scopri">
+								<a href="#"><span>SCOPRI</span></a>
+							</div> 
+						</div>
+					</a>
+				</div>
+
+				<!--INIZIO TERZA FILA-->
+
+				<div class="card-row">
+
+					<!--Prima Opera-->
+					<a href="#" title="Vai alla pagina dell'opera">
+
+						<div class="card-opera first-card">
+
+							<div class="card-image">
+								<img src="Immagini opere e icone\SanGiovanniBattista-XVsecolo.jpg" alt="Tavola raffigurante San Giovanni Battista di un pittore bolognese/ferrarese del XV secolo"/>
+							</div>
+
+							<div class="card-description">
+								<h2>Pittore bolognese / ferrarese</h2>
+								<p><em>San Giovanni Battista</em>, XV secolo</p>           
+							</div>
+
+							<div class="bottone-scopri">
+								<a href="#"><span>SCOPRI</span></a>
+							</div>          
+						</div>
+					</a>
+
+					<!--Seconda Opera-->
+					<a href="#" title="Vai alla pagina dell'opera">
+
+						<div class="card-opera second-card">
+
+							<div class="card-image">
+								<img src="Immagini opere e icone\MadonnaDelParadiso-MicheleDiMatteo-cat.jpg" alt="Affresco staccato raffigurante la Madonna del Paradiso di Michele di Matteo nella Chiesa di Santo Stefano a Bologna"/>
+							</div>
+
+							<div class="card-description">
+								<h2>Michele di Matteo</h2>
+								<p><em>Madonna del Paradiso</em>, XV secolo</p>           
+							</div>
+
+							<div class="bottone-scopri">
+								<a href="#"><span>SCOPRI</span></a>
+							</div> 
+						</div>
+					</a>
+
+					<!--Terza Opera-->
+					<a href="#" title="Vai alla pagina dell'opera">
+
+						<div class="card-opera third-card">
+
+							<div class="card-image">
+								<img src="Immagini opere e icone\Crocefisso-Simone-cat.jpg" alt="Crocifisso di Simone dei Crocifissi nella Chiesa di Santo Stefano a Bologna"/>
+							</div>
+
+							<div class="card-description">
+								<h2>Simone dei Crocifissi</h2>
+								<p><em>Crocifissione</em>, 1375-1380</p>           
+							</div>
+
+							<div class="bottone-scopri">
+								<a href="#"><span>SCOPRI</span></a>
+							</div> 
+						</div>
+					</a>
+				</div>
+
+				<!--INIZIO QUARTA FILA-->
+
+				<div class="card-row">
+
+					<!--Prima Opera-->
+					<a href="#" title="Vai alla pagina dell'opera">
+
+						<div class="card-opera first-card">
+
+							<div class="card-image">
+								<img src="Immagini opere e icone\Vitale-affresco.jpg" alt="Sposalizio mistico di Santa Caterina di Vitale da Bologna nella chiesa di Santa Maria dei Servi a Bologna"/>
+							</div>
+
+							<div class="card-description">
+								<h2>Vitale da Bologna</h2>
+								<p><em>Sposalizio mistico di Santa Caterina</em>, 1310-1360</p>           
+							</div>
+
+							<div class="bottone-scopri">
+								<a href="#"><span>SCOPRI</span></a>
+							</div>          
+						</div>
+					</a>
+
+					<!--Seconda Opera-->
+					<a href="#" title="Vai alla pagina dell'opera">
+
+						<div class="card-opera second-card">
+
+							<div class="card-image">
+								<img src="Immagini opere e icone\Crocefisso-Lombardi.jpg" alt="Crocifisso ligneo di Alfonso Lombardi nella chiesa di Santa Maria dei Servi"/>
+							</div>
+
+							<div class="card-description">
+								<h2>Alfonso Lombardi</h2>
+								<p><em>Crocifisso ligneo</em>, seconda metà XV secolo</p>           
+							</div>
+
+							<div class="bottone-scopri">
+								<a href="#"><span>SCOPRI</span></a>
+							</div> 
+						</div>
+					</a>
+
+					<!--Terza Opera-->
+					<a href="#" title="Vai alla pagina dell'opera">
+
+						<div class="card-opera third-card">
+
+							<div class="card-image">
+								<img src="Immagini opere e icone\Polittico-JacopoDiPaolo-cat.jpg" alt="Polittico ligneo di Jacopo di Paolo nella Basilica di San Petronio a Bologna"/>
+							</div>
+
+							<div class="card-description">
+								<h2>Jacopo di Paolo</h2>
+								<p><em>Polittico ligneo</em>, 1408-1415</p>           
+							</div>
+
+							<div class="bottone-scopri">
+								<a href="#"><span>SCOPRI</span></a>
+							</div> 
+						</div>
+					</a>
+				</div>
+
+				<!--INIZIO QUINTA FILA-->
+
+				<div class="card-row">
+
+					<!--Prima Opera-->
+					<a href="#" title="Vai alla pagina dell'opera">
+
+						<div class="card-opera first-card">
+
+							<div class="card-image">
+								<img src="Immagini opere e icone\Pieta-Baccio-cat.jpg" alt="Pietà in terracotta realizzata da Baccio da Montelupo"/>
+							</div>
+
+							<div class="card-description">
+								<h2>Baccio da Montelupo</h2>
+								<p><em>Pietà</em>, XV secolo</p>           
+							</div>
+
+							<div class="bottone-scopri">
+								<a href="#"><span>SCOPRI</span></a>
+							</div>          
+						</div>
+					</a>
+
+					<!--Seconda Opera-->
+					<a href="#" title="Vai alla pagina dell'opera">
+
+						<div class="card-opera second-card">
+
+							<div class="card-image">
+								<img src="Immagini opere e icone\Busto-domenico.jpg" alt="Immagine del busto di San Domenico realizzato in terracotta da Niccolò dell'Arca"/>
+							</div>
+
+							<div class="card-description">
+								<h2>Niccolò dell'Arca</h2>
+								<p><em>Busto di San Domenico</em>, 1474</p>           
+							</div>
+
+							<div class="bottone-scopri">
+								<a href="#"><span>SCOPRI</span></a>
+							</div> 
+						</div>
+					</a>
+
+					<!--Terza Opera-->
+					<a href="#" title="Vai alla pagina dell'opera">
+
+						<div class="card-opera third-card">
+
+							<div class="card-image">
+								<img src="Immagini opere e icone\San-Cristoforo.jpg" alt="Affresco raffigurate San Cristoforo nella cappella dell'Arcangelo Michele nella chiesa di San Domenico a Bologna"/>
+							</div>
+
+							<div class="card-description">
+								<h2>Ambito emiliano</h2>
+								<p><em>San Cristoforo</em>, XV secolo</p>           
+							</div>
+
+							<div class="bottone-scopri">
+								<a href="#"><span>SCOPRI</span></a>
+							</div> 
+						</div>
+					</a>
+				</div>
+
+				<!--Pagination COPIATA DALLA PROF-->
+				<div>
+					<div class="pagination">
+						<a href="#" title="Precedente">&laquo;</a>
+						<a href="#" class="attivo" title="1">1</a>
+						<a href="#" title="2">2</a>
+						<a href="#" title="3">3</a>
+						<a href="#" title="Successiva">&raquo;</a>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<!--BOX PERCORSI TEMATICI-->
+		<div class="box-percorsi"> 
+			<div class="titolo-box">
+				<div class="separator">
+					<h2>ESPLORA I PERCORSI TEMATICI</h2>
+				</div>
+			</div>
+			<div class="contenitore-immagini">
+				<div class="box left-box">
+					<img src="Immagini opere e icone\Arca-San-Domenico.JPG" alt="Percorso 1"/>
+					<div class="nome-percorso">
+						<h3>Gli spazi liturgici e le loro funzionalità</h3>
+					</div>
+				</div>
+
+				<div class="box right-box">
+					<a href="Percorso-tematico.html">
+						<img src="Immagini opere e icone\Memmi-sfondo-percorso.jpg" alt="Percorso 2"/>
+						<div class="nome-percorso">
+							<h3>Punzoni, graniture e stiletto: la materialità delle opere</h3>
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="footer">
+			<div class="footer-links">
+				<p><a href="#">Contatti</a></p>
+				<p>|</p>
+				<p><a href="#">About us</a></p>
+				<p>|</p>
+				<p><a href="#">Credits</a></p>
+				<p>|</p>
+				<p><a href="#">Licenze</a></p>
+				<p>|</p>
+				<p><a href="Web-Project-Plan.html" target="_blank">Web Poject Plan</a></p>
+			</div>
+			<div class="go-back-up">
+				<p><a href="#top-page" title="Vai all'inizio della pagina" class="clickable-container">Torna su</a></p>
+			</div>
+
+			<p class="footer-bottom-text" style="padding-bottom: 8px;">Progetto realizzato per il corso Unibo di Informatica Umanistica a.a.2024/25</p>
+			
+		</div>
+
+		
+
+	</body>
+
+	<script>
+		var acc = document.getElementsByClassName("accordion");
+		var i;
+		
+		for (i = 0; i < acc.length; i++) {
+			acc[i].addEventListener("click", function() {
+				this.classList.toggle("active-filter");
+				var panel = this.nextElementSibling;
+				if (panel.style.maxHeight) {
+					panel.style.maxHeight = null;
+					panel.style.padding = "0"; // togli padding quando si chiude
+				} else {
+					panel.style.maxHeight = panel.scrollHeight + "px";
+					panel.style.padding = "10px"; // aggiungi padding quando si apre
+				} 
+			});
+		}
+	</script>
+	<script>
+		const sidebar = document.querySelector('.sidebar');
+		const stopper = document.querySelector('.full-width-section');
+
+		window.addEventListener('scroll', function() {
+		const stopperTop = stopper.getBoundingClientRect().top;
+		
+		if (stopperTop <= 100) { // o il valore che preferisci
+			sidebar.style.position = 'absolute';
+			sidebar.style.top = (stopper.offsetTop - sidebar.offsetHeight) + 'px';
+		} else {
+			sidebar.style.position = 'fixed';
+			sidebar.style.top = '20px';
+		}
+		});
+	</script>
+
+</html>

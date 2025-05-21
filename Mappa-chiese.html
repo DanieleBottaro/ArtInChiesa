@@ -1,0 +1,1280 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+		<title>Mappa delle chiese</title>
+		<link rel="stylesheet" href="CSS/style.css"/>
+
+		<link rel="icon" type="image/x-icon" href="Immagini opere e icone\Icone e logo\Logo-Sito-favicon.png">
+
+		<!--Link per la mappa leaflet-->
+		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+		<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+		<!--Metadati della pagina web-->
+		<link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"/>
+
+		<META NAME="DC.Title" content="ArtInChiesa"/>
+		<META name="DC.Creator" content="Daniele Bottaro"/>
+		<META name="DC.Subject" content="Opere d'arte tra XIII e XV secolo"/>
+		<META name="DC.Description" content="Catalogo delle opere realizzate tra XIII e XV secolo conservate all'interno delle chiese di Bologna"/>
+		<META name="DC.Publisher" content="Github Pages"/>
+		<META name="DC.Date" content="2025-05-21"/>
+		<META name="DC.Type" content="Catalogo web"/>
+		<META name="DC.Format" content="Sito web"/>
+		<META name="DC.Language" content="It"/>
+    </head>
+
+    <body>
+
+		<header class="header" style="position: fixed; z-index: 100; width: 100vw;">
+
+			<a href="#" class="logo"><img src="Immagini opere e icone\Icone e logo\Logo-sito.png"></a>
+
+			<nav class="navbar">
+				<div class="navbar-left">
+					<a href="Index.html">Home</a>
+					<a href="Mappa-chiese.html" style="color: #9e3a26;">Mappa delle chiese</a>
+					<a href="Catalogo-opere.html">Catalogo opere</a>
+
+					<div class="dropdown">
+
+						<button class="dropbtn"><a class="droplink" href="#">Percorsi tematici</a></button>
+						<img src="Immagini opere e icone\Icone e logo\arrow_drop_down.svg">
+
+						<div class="dropdown-content">
+						  <a href="#">Gli spazi liturgici e le loro funzionalità</a>
+						  <a href="Percorso-tematico.html">Punzoni, graniture e stiletto: la materialità delle opere</a>
+						</div>
+					</div>
+					
+					
+				</div>  
+				<div class="navbar-right">
+					<a href="#" id="contatti">Contatti</a>
+					<div class="dropdown">
+
+						<button class="dropbtn"><a class="droplink" href="#">IT</a></button>
+						<img src="Immagini opere e icone\Icone e logo\arrow_drop_down.svg">
+
+						<div class="dropdown-content">
+						  <a href="#">EN</a>
+						  <a href="#" style="color: #9e3a26">IT</a>
+						</div>
+					</div>
+					<a href="#"><img src="Immagini opere e icone\Icone e logo\Accesso-symbol.svg" style="margin-right: 3px;">Accedi</a>
+					
+					
+				</div>
+			</nav>
+
+		</header>
+
+
+		<div class="right-half">
+			<div id="map"></div>
+		</div>
+      
+		<div class="left-half">
+
+			<div class="breadcrumbs" id="top-page" style="margin: 92px 0px 15px 15px; scroll-margin-top: 80px;">
+				<p><a href="Index.html">Home</a></p>
+				<p class="crumbs-separator"><strong>/</strong></p>
+				<p class="selected-crumb">Mappa delle chiese</p>
+			</div>
+
+			<form>
+				<div class="searchbar">
+					<span class="searchbar-icon material-symbols-outlined">search</span>
+					<input class="searchbar-input" type="search" placeholder="Cerca la chiesa">
+				</div>
+			</form>
+
+			<!--Prima chiesa-->
+			<div class="content target" id="SanDomenico">
+
+
+				<img class="imgChiesa" src="Immagini opere e icone\Immagini chiese\Facciata-SDomenico.jpg" alt="Facciata della Basilica di San Domenico a Bologna"/>
+
+
+				<div class="content-title">
+
+					<h2>Basilica di San Domenico</h2>
+
+					<p class="descrizione-chiesa">L’edificazione della chiesa di San Domenico di Bologna è collocabile intorno al 1228, anno in cui si iniziò presumibilmente ad abbattere la chiesa di <strong>San Nicolò delle Vigne</strong> per costruirne una più grande e ad ingrandire il complesso conventuale. La chiesa poi, a partire dagli intensi lavori di ristrutturazione e ampliamento del nucleo conventuale tra gli anni 30 e 50 del XIII secolo che in realtà... <br><a href="Pagina-chiesa.html" title="Vai alla pagina della chiesa">Leggi di più</a></p>
+
+					<h3>Alcune delle opere che custodisce:</h3>
+					
+					<div class="altreOpere">
+
+						<div class="icona">
+
+							<a href="#" title="Vai alla pagina dell'opera"><img src="Immagini opere e icone\Particolare-Arca-Domenico.jpg" alt="Particolare dell'Arca di San Domenico"/></a>
+
+							<div class="overlay">
+								<p class="titolo-opera">Nicola Pisano,<em> Arca di San Domenico</em>, 1267</p>
+							</div>
+						</div>
+
+						<div class="icona">
+							<a href="#" title="Vai alla pagina dell'opera"><img src="Immagini opere e icone\Busto-Domenico.jpg" alt="Immagine del busto di San Domenico realizzato in terracotta da Niccolò dell'Arca"/></a>
+							<div class="overlay2">
+								<p class="titolo-opera">Niccolò dell'Arca,<em> Busto di San Domenico</em>, 1474 </p>
+							</div>
+						</div>
+
+						<div class="icona">
+							<a href="Pagina-item.html" title="Vai alla pagina dell'opera"><img src="Immagini opere e icone\Croce-Giunta.jpg" alt="Crocefisso di Giunta Pisano in San Domenico a Bologna"/></a>
+							<div class="overlay3">
+								<p class="titolo-opera">Giunta Pisano,<em> Crocefissione</em>, 1250-1255</p>
+							</div>
+						</div>
+					</div>    
+				</div>
+				
+				<div class="sotto-img">
+					<p class="scopri"><strong><a href="#">Scopri dove si trova sulla mappa</a></strong></p>
+					<p class="scheda-chiesa"><a href="Pagina-chiesa.html" title="Vai alla pagina della chiesa"><strong>Vai alla pagina della chiesa</strong></a></p>
+				</div>
+
+			</div>
+
+			<!--Fine prima chiesa-->
+			
+			<!--Inizio seconda chiesa-->
+
+			<div class="content target" id="Maria-dei-Servi">
+
+				<img class="imgChiesa" src="Immagini opere e icone\Immagini chiese\Santa-Maria-dei-Servi.jpg" alt="Facciata della Chiesa di Santa Maria dei Servi a Bologna"/>
+				
+				<div class="content-title">
+
+					<h2>Chiesa di Santa Maria dei Servi</h2>
+
+					<p class="descrizione-chiesa">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus eum facere autem obcaecati, quibusdam a iure culpa facilis nulla ducimus rerum iusto! Nisi sed qui in quidem sequi excepturi dicta. Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum reprehenderit dolorum dolorem facilis sint eaque, reiciendis eum minima laudantium tenetur enim autem repellat recusandae hic ipsum dicta cumque! Magni, numquam.<br>
+					</p>
+
+					<h3>Alcune delle opere che custodisce:</h3>
+					
+					<div class="altreOpere">
+
+						<div class="icona">
+
+							<a href="#" title="Vai alla pagina dell'opera"><img src="Immagini opere e icone\Maesta-Cimabue.JPG" alt="Maestà di Cimabue in Santa Maria dei Servi a Bologna"/></a>
+
+							<div class="overlay">
+								<p class="titolo-opera">Cimabue e aiuti,<em> Maestà</em>, 1280-1285</p>
+							</div>
+
+						</div>
+
+						<div class="icona">
+
+							<a href="#" title="Vai alla pagina dell'opera"><img src="Immagini opere e icone\MadonnaDellaSalveRegina.JPG" alt="Madonna della Salve in Santa Maria dei Servi a Bologna"/></a>
+
+							<div class="overlay2">
+								<p class="titolo-opera">Artista anonimo,<em> Madonna della Salve</em>, 1261(?)</p>
+							</div>
+
+						</div>
+
+						<div class="icona">
+
+							<a href="#" title="Vai alla pagina dell'opera"><img src="Immagini opere e icone\Polittico-Lippo.jpg" alt="Madonna in trono con Bambino e santi di Lippo di Dalmasio in Santa Maria dei Servi a Bologna"/></a>
+
+							<div class="overlay3">
+								<p class="titolo-opera">Lippo di Dalmasio,<em> Madonna in trono con Bambino e santi</em>, 1375/1410 </p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="sotto-img">
+					<p class="scopri"><strong><a href="#">Scopri dove si trova sulla mappa</a></strong></p>
+					<p class="scheda-chiesa"><a href="#" title="Vai alla pagina della chiesa"><strong>Vai alla pagina della chiesa</strong></a></p>
+				</div>
+		
+			</div>
+
+			<!--Fine seconda chiesa-->
+			
+			<!--Inizio terza chiesa-->
+			
+			<div class="content target" id="Santo-Stefano">
+
+				<img class="imgChiesa" src="Immagini opere e icone\Immagini chiese\Santo-Stefano-crop.jpg" alt="Facciata della Chiesa di Santo Stefano a Bologna"/>           
+
+				<div class="content-title">
+
+					<h2>Basilica di Santo Stefano</h2>
+
+					<p class="descrizione-chiesa">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus eum facere autem obcaecati, quibusdam a iure culpa facilis nulla ducimus rerum iusto! Nisi sed qui in quidem sequi excepturi dicta. Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum reprehenderit dolorum dolorem facilis sint eaque, reiciendis eum minima laudantium tenetur enim autem repellat recusandae hic ipsum dicta cumque! Magni, numquam.<br>
+					</p>
+
+					<h3>Alcune delle opere che custodisce:</h3>
+					
+					<div class="altreOpere">
+
+						<div class="icona">
+
+							<a href="#" title="Vai alla pagina dell'opera"><img src="Immagini opere e icone\Crocefisso-Santo-Stefano.jpg" alt="Crocifisso di Simone dei Crocifissi nella Chiesa di Santo Stefano a Bologna"/></a>
+
+							<div class="overlay">
+								<p class="titolo-opera">Simone dei Crocefissi,<em> Crocefissione</em>, 1375-1380</p>
+							</div>
+
+						</div>
+
+						<div class="icona">
+
+							<a href="#" title="Vai alla pagina dell'opera"><img src="Immagini opere e icone\Madonna-Andrea-di-Bartolo.jpg" alt="Madonna dell'Umiltà di Andrea di Bartolo nella Chiesa di Santo Stefano a Bologna"/></a>
+
+							<div class="overlay2">
+								<p class="titolo-opera">Andrea di Bartolo,<em> Madonna dell'Umiltà</em>, 1385-1428 </p>
+							</div>
+
+						</div>
+
+						<div class="icona">
+
+							<a href="#" title="Vai alla pagina dell'opera"><img src="Immagini opere e icone\Polittico-Scannelli.jpg" alt="Polittico di Giovanni Scannelli nella Chiesa di Santo Stefano a Bologna"/></a>
+							
+							<div class="overlay3">
+								<p class="titolo-opera">Giovanni Scannelli,<em> Polittico</em>, 1410-1423 </p>
+							</div>
+
+						</div>
+					</div>    
+				</div>
+			
+				<div class="sotto-img">
+					<p class="scopri"><strong><a href="#">Scopri dove si trova sulla mappa</a></strong></p>
+					<p class="scheda-chiesa"><a href="#" title="Vai alla pagina della chiesa"><strong>Vai alla pagina della chiesa</strong></a></p>
+				</div>
+
+			</div>
+
+			<!--fine terza chiesa-->
+
+			<!--Inizio quarta chiesa-->
+
+			<div class="content target" id="Giovanni">
+
+				<img class="imgChiesa" src="Immagini opere e icone\Immagini chiese\San-Giovanni-in-Monte.jpg" alt="Facciata della chiesa di San Giovanni in Monte a Bologna"/>
+				
+				<div class="content-title">
+
+					<h2>Chiesa di San Giovanni in Monte</h2>
+
+					<p class="descrizione-chiesa">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus eum facere autem obcaecati, quibusdam a iure culpa facilis nulla ducimus rerum iusto! Nisi sed qui in quidem sequi excepturi dicta. Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum reprehenderit dolorum dolorem facilis sint eaque, reiciendis eum minima laudantium tenetur enim autem repellat recusandae hic ipsum dicta cumque! Magni, numquam.<br>
+					</p>
+
+					<h3>Alcune delle opere che custodisce:</h3>
+					
+					<div class="altreOpere">
+
+						<div class="icona">
+
+							<a href="#" title="Vai alla pagina dell'opera"><img src="Immagini opere e icone\Aquila-Niccolo.jpg" alt="Aquila di Niccolò dell'Arca nella facciata della chiesa di San Giovanni in Monte"/></a>
+
+							<div class="overlay">
+								<p class="titolo-opera">Niccolò dell'Arca,<em> Aquila</em>, 1475</p>
+							</div>
+
+						</div>
+
+						<div class="icona">
+
+							<a href="#" title="Vai alla pagina dell'opera"><img src="Immagini opere e icone\Blank-image.jpg"/></a>
+
+							<div class="overlay2">
+								<p class="titolo-opera"></p>
+							</div>
+
+						</div>
+
+						<div class="icona">
+
+							<a href="#" title="Vai alla pagina dell'opera"><img src="Immagini opere e icone\Blank-image.jpg"/></a>
+
+							<div class="overlay3">
+								<p class="titolo-opera"></p>
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+				<div class="sotto-img">
+					<p class="scopri"><strong><a href="#">Scopri dove si trova sulla mappa</a></strong></p>
+					<p class="scheda-chiesa"><a href="#" title="Vai alla pagina della chiesa"><strong>Vai alla pagina della chiesa</strong></a></p>
+				</div>
+		
+			</div>
+
+			<!--Inizio quinta chiesa-->
+
+
+			<!--Inizio ultima chiesa-->
+			<div class="content target" id="Petronio">
+
+
+				<img class="imgChiesa" src="Immagini opere e icone\Immagini chiese\San-Petronio.jpg" alt="Facciata della Basilica di San Petronio a Bologna"/>                
+
+
+				<div class="content-title">
+
+					<h2>Basilica di San Petronio</h2>
+
+					<p class="descrizione-chiesa">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus eum facere autem obcaecati, quibusdam a iure culpa facilis nulla ducimus rerum iusto! Nisi sed qui in quidem sequi excepturi dicta. Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum reprehenderit dolorum dolorem facilis sint eaque, reiciendis eum minima laudantium tenetur enim autem repellat recusandae hic ipsum dicta cumque! Magni, numquam.<br>
+					</p>
+
+					<h3>Alcune delle opere che custodisce:</h3>
+					
+					<div class="altreOpere">
+
+						<div class="icona">
+
+							<a href="#" title="Vai alla pagina dell'opera"><img src="Immagini opere e icone\Polittico-JacopoDiPaolo.jpg" alt="Dettaglio del Crocefisso ligneo di Jacopo di Paolo nella Basilica di San Petronio"/></a>
+
+							<div class="overlay">
+								<p class="titolo-opera">Jacopo di Paolo,<em> Polittco ligneo</em>, 1408-1415</p>
+							</div>
+
+						</div>
+
+						<div class="icona">
+
+							<a href="#" title="Vai alla pagina dell'opera"><img src="Immagini opere e icone\Blank-image.jpg"/></a>
+
+							<div class="overlay2">
+								<p class="titolo-opera"></p>
+							</div>
+
+						</div>
+
+						<div class="icona">
+
+							<a href="#" title="Vai alla pagina dell'opera"><img src="Immagini opere e icone\Blank-image.jpg"/></a>
+
+							<div class="overlay3">
+								<p class="titolo-opera"></p>
+							</div>
+
+						</div>
+
+					</div>    
+				</div>
+				
+				<div class="sotto-img">
+					<p class="scopri"><strong><a href="#">Scopri dove si trova sulla mappa</a></strong></p>
+					<p class="scheda-chiesa"><a href="#" title="Vai alla pagina della chiesa"><strong>Vai alla pagina della chiesa</strong></a></p>
+				</div>
+
+			</div>
+
+			
+			<div class="footer">
+				<div class="footer-links">
+					<p><a href="#">Contatti</a></p>
+					<p>|</p>
+					<p><a href="#">About us</a></p>
+					<p>|</p>
+					<p><a href="#">Credits</a></p>
+					<p>|</p>
+					<p><a href="#">Licenze</a></p>
+					<p>|</p>
+					<p><a href="Web-Project-Plan.html" target="_blank">Web Poject Plan</a></p>
+				</div>
+				<div class="go-back-up">
+					<p><a href="#top-page" title="Vai all'inizio della pagina" class="clickable-container">Torna su</a></p>
+				</div>
+				<p class="footer-bottom-text" style="padding-bottom: 8px;">Progetto realizzato per il corso Unibo di Informatica Umanistica a.a.2024/25</p>
+
+			</div>
+		</div>
+
+			
+
+
+      	<script>    
+
+			var map = L.map('map').setView([44.495553, 11.343745], 15);
+			L.tileLayer('https://api.maptiler.com/maps/streets-v2/{z}/{x}/{y}.png?key=dAN0Cn6NIjQxHVKnqnJS',{
+				attribution: '<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>',
+			}).addTo(map);
+
+
+			var geojson = {
+			"type": "FeatureCollection",
+			"features": [
+			{
+				"type": "Feature",
+				"properties": {
+				"name": "Basilica di San Domenico",
+				"marker-color": "#7e7e7e",
+				"marker-size": "medium",
+				"marker-symbol": "circle",
+				"img": "Immagini opere e icone/Immagini chiese/Facciata-SDomenico.jpg",
+				"link": "#SanDomenico"
+				},
+				"geometry": {
+				"coordinates": [
+					11.344327636324124,
+					44.48953201646566
+				],
+				"type": "Point"
+				},
+				"id": 0
+			},
+			{
+				"type": "Feature",
+				"properties": {
+				"name": "Basilica di San Petronio",
+				"marker-color": "#7e7e7e",
+				"marker-size": "medium",
+				"marker-symbol": "circle",
+				"img": "Immagini opere e icone/Immagini chiese/San-Petronio.jpg",
+				"link": "#Petronio"
+				},
+				"geometry": {
+				"coordinates": [
+					11.343075988682642,
+					44.49293889624738
+				],
+				"type": "Point"
+				},
+				"id": 1
+			},
+			{
+				"type": "Feature",
+				"properties": {
+				"name": "Chiesa di Santa Maria dei Servi",
+				"marker-color": "#7e7e7e",
+				"marker-size": "medium",
+				"marker-symbol": "circle",
+				"img": "Immagini opere e icone/Immagini chiese/Santa-Maria-dei-Servi.jpg",
+				"link": "#Maria-dei-Servi"
+				},
+				"geometry": {
+				"coordinates": [
+					11.352466838753685,
+					44.49167852990462
+				],
+				"type": "Point"
+				},
+				"id": 2
+			},
+			{
+				"type": "Feature",
+				"properties": {
+				"name": "Basilica di San Francesco",
+				"marker-color": "#7e7e7e",
+				"marker-size": "medium",
+				"marker-symbol": "circle"
+				},
+				"geometry": {
+				"coordinates": [
+					11.335486604723911,
+					44.494795520417796
+				],
+				"type": "Point"
+				},
+				"id": 3
+			},
+			{
+				"type": "Feature",
+				"properties": {
+				"name": "Cattedrale di San Pietro",
+				"marker-color": "#7e7e7e",
+				"marker-size": "medium",
+				"marker-symbol": "circle"
+				},
+				"geometry": {
+				"coordinates": [
+					11.343368,
+					44.495775
+				],
+				"type": "Point"
+				},
+				"id": 4
+			},
+			{
+				"type": "Feature",
+				"properties": {
+				"name": "Basilica di Santo Stefano",
+				"marker-color": "#7e7e7e",
+				"marker-size": "medium",
+				"marker-symbol": "circle",
+				"img": "Immagini opere e icone/Immagini chiese/Santo-Stefano-crop.jpg",
+				"link": "#Santo-Stefano"
+				},
+				"geometry": {
+				"coordinates": [
+					11.348654,
+					44.492038
+				],
+				"type": "Point"
+				},
+				"id": 5
+			},
+			{
+				"type": "Feature",
+				"properties": {
+				"name": "Basilica di San Giacomo Maggiore",
+				"marker-color": "#7e7e7e",
+				"marker-size": "medium",
+				"marker-symbol": "circle"
+				},
+				"geometry": {
+				"coordinates": [
+					11.349379,
+					44.495589
+				],
+				"type": "Point"
+				},
+				"id": 6
+			},
+			{
+				"type": "Feature",
+				"properties": {
+				"name": "Chiesa di San Clemente degli Spagnoli",
+				"marker-color": "#7e7e7e",
+				"marker-size": "medium",
+				"marker-symbol": "circle"
+				},
+				"geometry": {
+				"coordinates": [
+					11.338848,
+					44.490670
+				],
+				"type": "Point"
+				},
+				"id": 7
+			},
+			{
+				"type": "Feature",
+				"properties": {
+				"name": "Basilica di San Martino Maggiore",
+				"marker-color": "#7e7e7e",
+				"marker-size": "medium",
+				"marker-symbol": "circle",
+				"img": "Immagini opere e icone/Immagini chiese/San-Martino.jpg",
+				"link": "#SanMartino"
+				},
+				"geometry": {
+				"coordinates": [
+					11.346627,
+					44.497181
+				],
+				"type": "Point"
+				},
+				"id": 8
+			},
+			{
+				"type": "Feature",
+				"properties": {
+				"name": "Chiesa di San Paolo Maggiore",
+				"marker-color": "#7e7e7e",
+				"marker-size": "medium",
+				"marker-symbol": "circle",
+				"img": "Immagini opere e icone/Immagini chiese/San-Paolo-Maggiore.jpg",
+				"link": "#SanPaoloMaggiore"
+				},
+				"geometry": {
+				"coordinates": [
+					11.339918,
+					44.491024
+				],
+				"type": "Point"
+				},
+				"id": 9
+			},
+			{
+				"type": "Feature",
+				"properties": {
+				"name": "Chiesa del Santissimo Salvatore",
+				"marker-color": "#7e7e7e",
+				"marker-size": "medium",
+				"marker-symbol": "circle",
+				"img": "Immagini opere e icone/Immagini chiese/Santissimo-Salvatore.jpg",
+				"link": "#SantissimoSalvatore"
+				},
+				"geometry": {
+				"coordinates": [
+					11.339111,
+					44.493854
+				],
+				"type": "Point"
+				},
+				"id": 10
+			},
+			{
+				"type": "Feature",
+				"properties": {
+				"name": "Santuario della Beata Vergine del Soccorso",
+				"marker-color": "#7e7e7e",
+				"marker-size": "medium",
+				"marker-symbol": "circle",
+				"img": "Immagini opere e icone/Immagini chiese/Vergine-del-Soccorso.jpg",
+				"link": "#VergineDelSoccorso"
+				},
+				"geometry": {
+				"coordinates": [
+					11.350835,
+					44.502606
+				],
+				"type": "Point"
+				},
+				"id": 11
+			},
+			{
+				"type": "Feature",
+				"properties": {
+				"name": "Chiesa di Santa Caterina di Strada Maggiore",
+				"marker-color": "#7e7e7e",
+				"marker-size": "medium",
+				"marker-symbol": "circle"
+				},
+				"geometry": {
+				"coordinates": [
+					11.355043,
+					44.491202
+				],
+				"type": "Point"
+				},
+				"id": 12
+			},
+			{
+				"type": "Feature",
+				"properties": {
+				"name": "Chiesa della Santissima Trinità",
+				"marker-color": "#7e7e7e",
+				"marker-size": "medium",
+				"marker-symbol": "circle"
+				},
+				"geometry": {
+				"coordinates": [
+					11.352584,
+					44.487390
+				],
+				"type": "Point"
+				},
+				"id": 13
+			},
+			{
+				"type": "Feature",
+				"properties": {
+				"name": "Chiesa del Baraccano",
+				"marker-color": "#7e7e7e",
+				"marker-size": "medium",
+				"marker-symbol": "circle"
+				},
+				"geometry": {
+				"coordinates": [
+					11.353835,
+					44.484928
+				],
+				"type": "Point"
+				},
+				"id": 14
+			},
+			{
+				"type": "Feature",
+				"properties": {
+				"name": "Chiesa di Santa Maria della Vita",
+				"marker-color": "#7e7e7e",
+				"marker-size": "medium",
+				"marker-symbol": "circle",
+				"img": "Immagini opere e icone/Immagini chiese/Santa-Maria-della-Vita.jpg",
+				"link": "#MariaDellaVita"
+				},
+				"geometry": {
+				"coordinates": [
+					11.344602,
+					44.493329
+				],
+				"type": "Point"
+				},
+				"id": 15
+			},
+			{
+				"type": "Feature",
+				"properties": {
+				"name": "Chiesa di Santa Cristina",
+				"marker-color": "#7e7e7e",
+				"marker-size": "medium",
+				"marker-symbol": "circle"
+				},
+				"geometry": {
+				"coordinates": [
+					11.355092,
+					44.488670
+				],
+				"type": "Point"
+				},
+				"id": 16
+			},
+			{
+				"type": "Feature",
+				"properties": {
+				"name": "Chiesa della Madonna dei Poveri",
+				"marker-color": "#7e7e7e",
+				"marker-size": "medium",
+				"marker-symbol": "circle"
+				},
+				"geometry": {
+				"coordinates": [
+					11.335624,
+					44.492547
+				],
+				"type": "Point"
+				},
+				"id": 17
+			},
+			{
+				"type": "Feature",
+				"properties": {
+				"name": "Chiesa di Sant'Isaia",
+				"marker-color": "#7e7e7e",
+				"marker-size": "medium",
+				"marker-symbol": "circle"
+				},
+				"geometry": {
+				"coordinates": [
+					11.334052,
+					44.493798
+				],
+				"type": "Point"
+				},
+				"id": 18
+			},
+			{
+				"type": "Feature",
+				"properties": {
+				"name": "Chiesa di Sant'Antonio Abate",
+				"marker-color": "#7e7e7e",
+				"marker-size": "medium",
+				"marker-symbol": "circle"
+				},
+				"geometry": {
+				"coordinates": [
+					11.339505,
+					44.488490
+				],
+				"type": "Point"
+				},
+				"id": 19
+			},
+			{
+				"type": "Feature",
+				"properties": {
+				"name": "Chiesa di San Donato",
+				"marker-color": "#7e7e7e",
+				"marker-size": "medium",
+				"marker-symbol": "circle"
+				},
+				"geometry": {
+				"coordinates": [
+					11.347313,
+					44.495285
+				],
+				"type": "Point"
+				},
+				"id": 20
+			},
+			{
+				"type": "Feature",
+				"properties": {
+				"name": "Chiesa dei Santi Giuseppe e Ignazio",
+				"marker-color": "#7e7e7e",
+				"marker-size": "medium",
+				"marker-symbol": "circle"
+				},
+				"geometry": {
+				"coordinates": [
+					11.348150,
+					44.486408
+				],
+				"type": "Point"
+				},
+				"id": 21
+			},
+			{
+				"type": "Feature",
+				"properties": {
+				"name": "Chiesa dei Santi Gregorio e Siro",
+				"marker-color": "#7e7e7e",
+				"marker-size": "medium",
+				"marker-symbol": "circle"
+				},
+				"geometry": {
+				"coordinates": [
+					11.339360,
+					44.496075
+				],
+				"type": "Point"
+				},
+				"id": 22
+			},
+			{
+				"type": "Feature",
+				"properties": {
+				"name": "Chiesa dei Santi Bartolomeo e Gaetano",
+				"marker-color": "#7e7e7e",
+				"marker-size": "medium",
+				"marker-symbol": "circle"
+				},
+				"geometry": {
+				"coordinates": [
+					11.347273,
+					44.494192
+				],
+				"type": "Point"
+				},
+				"id": 23
+			},
+			{
+				"type": "Feature",
+				"properties": {
+				"name": "Chiesa di San Carlo",
+				"marker-color": "#7e7e7e",
+				"marker-size": "medium",
+				"marker-symbol": "circle"
+				},
+				"geometry": {
+				"coordinates": [
+					11.340997,
+					44.494192
+				],
+				"type": "Point"
+				},
+				"id": 24
+			},
+			{
+				"type": "Feature",
+				"properties": {
+				"name": "Chiesa di Santa Maria della Carità",
+				"marker-color": "#7e7e7e",
+				"marker-size": "medium",
+				"marker-symbol": "circle"
+				},
+				"geometry": {
+				"coordinates": [
+					11.331405,
+					44.497569
+				],
+				"type": "Point"
+				},
+				"id": 25
+			},
+			{
+				"type": "Feature",
+				"properties": {
+				"name": "Chiesa di Santa Maria in Galliera",
+				"marker-color": "#7e7e7e",
+				"marker-size": "medium",
+				"marker-symbol": "circle"
+				},
+				"geometry": {
+				"coordinates": [
+					11.342448,
+					44.496563
+				],
+				"type": "Point"
+				},
+				"id": 26
+			},
+			{
+				"type": "Feature",
+				"properties": {
+				"name": "Chiesa di Santa Maria e San Valentino della Grada",
+				"marker-color": "#7e7e7e",
+				"marker-size": "medium",
+				"marker-symbol": "circle"
+				},
+				"geometry": {
+				"coordinates": [
+					11.327932,
+					44.497286
+				],
+				"type": "Point"
+				},
+				"id": 27
+			},
+			{
+				"type": "Feature",
+				"properties": {
+				"name": "Chiesa di San Procolo",
+				"marker-color": "#7e7e7e",
+				"marker-size": "medium",
+				"marker-symbol": "circle"
+				},
+				"geometry": {
+				"coordinates": [
+					11.341152,
+					44.489415
+				],
+				"type": "Point"
+				},
+				"id": 28
+			},
+			{
+				"type": "Feature",
+				"properties": {
+				"name": "Chiesa di San Benedetto",
+				"marker-color": "#7e7e7e",
+				"marker-size": "medium",
+				"marker-symbol": "circle"
+				},
+				"geometry": {
+				"coordinates": [
+					11.344344,
+					44.501715
+				],
+				"type": "Point"
+				},
+				"id": 29
+			},
+			{
+				"type": "Feature",
+				"properties": {
+				"name": "Chiesa di San Sigismondo",
+				"marker-color": "#7e7e7e",
+				"marker-size": "medium",
+				"marker-symbol": "circle"
+				},
+				"geometry": {
+				"coordinates": [
+					11.352155,
+					44.495979
+				],
+				"type": "Point"
+				},
+				"id": 30
+			},
+			{
+				"type": "Feature",
+				"properties": {
+				"name": "Chiesa di San Giovanni Battista dei Celestini",
+				"marker-color": "#7e7e7e",
+				"marker-size": "medium",
+				"marker-symbol": "circle"
+				},
+				"geometry": {
+				"coordinates": [
+					11.341479,
+					44.492807
+				],
+				"type": "Point"
+				},
+				"id": 31
+			},
+			{
+				"type": "Feature",
+				"properties": {
+				"name": "Chiesa di San Michele dei Leprosetti",
+				"marker-color": "#7e7e7e",
+				"marker-size": "medium",
+				"marker-symbol": "circle"
+				},
+				"geometry": {
+				"coordinates": [
+					11.349392,
+					44.493662
+				],
+				"type": "Point"
+				},
+				"id": 32
+			},
+			{
+				"type": "Feature",
+				"properties": {
+				"name": "Chiesa dei Santi Filippo e Giacomo",
+				"marker-color": "#7e7e7e",
+				"marker-size": "medium",
+				"marker-symbol": "circle"
+				},
+				"geometry": {
+				"coordinates": [
+					11.334125,
+					44.501215
+				],
+				"type": "Point"
+				},
+				"id": 33
+			},
+			{
+				"type": "Feature",
+				"properties": {
+				"name": "Chiesa dei Santi Vitale e Agricola in Arena",
+				"marker-color": "#7e7e7e",
+				"marker-size": "medium",
+				"marker-symbol": "circle"
+				},
+				"geometry": {
+				"coordinates": [
+					11.350883,
+					44.494393
+				],
+				"type": "Point"
+				},
+				"id": 34
+			},
+			{
+				"type": "Feature",
+				"properties": {
+				"name": "Basilica di Santa Maria Maggiore",
+				"marker-color": "#7e7e7e",
+				"marker-size": "medium",
+				"marker-symbol": "circle"
+				},
+				"geometry": {
+				"coordinates": [
+					11.341817,
+					44.498036
+				],
+				"type": "Point"
+				},
+				"id": 35
+			},
+			{
+				"type": "Feature",
+				"properties": {
+				"name": "Chiesa di Santa Maria della Pioggia",
+				"marker-color": "#7e7e7e",
+				"marker-size": "medium",
+				"marker-symbol": "circle"
+				},
+				"geometry": {
+				"coordinates": [
+					11.341836,
+					44.498885
+				],
+				"type": "Point"
+				},
+				"id": 36
+			},
+			{
+				"type": "Feature",
+				"properties": {
+				"name": "Chiesa di Santa Maria Lebarum Coeli",
+				"marker-color": "#7e7e7e",
+				"marker-size": "medium",
+				"marker-symbol": "circle"
+				},
+				"geometry": {
+				"coordinates": [
+					11.341836,
+					44.498885
+				],
+				"type": "Point"
+				},
+				"id": 37
+			},
+			{
+				"type": "Feature",
+				"properties": {
+				"name": "Chiesa di Santa Maria Incoronata",
+				"marker-color": "#7e7e7e",
+				"marker-size": "medium",
+				"marker-symbol": "circle"
+				},
+				"geometry": {
+				"coordinates": [
+					11.356516,
+					44.496264
+				],
+				"type": "Point"
+				},
+				"id": 38
+			},
+			{
+				"type": "Feature",
+				"properties": {
+				"name": "Chiesa di Santa Maria della Pietà",
+				"marker-color": "#7e7e7e",
+				"marker-size": "medium",
+				"marker-symbol": "circle"
+				},
+				"geometry": {
+				"coordinates": [
+					11.355502,
+					44.494303
+				],
+				"type": "Point"
+				},
+				"id": 39
+			},
+			{
+				"type": "Feature",
+				"properties": {
+				"name": "Chiesa di Santa Maria della Maddalena",
+				"marker-color": "#7e7e7e",
+				"marker-size": "medium",
+				"marker-symbol": "circle"
+				},
+				"geometry": {
+				"coordinates": [
+					11.354099,
+					44.497399
+				],
+				"type": "Point"
+				},
+				"id": 40
+			},
+			{
+				"type": "Feature",
+				"properties": {
+				"name": "Chiesa di Santa Maria della Mascarella",
+				"marker-color": "#7e7e7e",
+				"marker-size": "medium",
+				"marker-symbol": "circle"
+				},
+				"geometry": {
+				"coordinates": [
+					11.350124,
+					44.499568
+				],
+				"type": "Point"
+				},
+				"id": 41
+			},
+			{
+				"type": "Feature",
+				"properties": {
+				"name": "Chiesa di Santa Maria della Visitazione al Ponte delle Lame",
+				"marker-color": "#7e7e7e",
+				"marker-size": "medium",
+				"marker-symbol": "circle"
+				},
+				"geometry": {
+				"coordinates": [
+					11.335477,
+					44.498447
+				],
+				"type": "Point"
+				},
+				"id": 42
+			},
+			{
+				"type": "Feature",
+				"properties": {
+				"name": "Chiesa di Santa Caterina di via Saragozza",
+				"marker-color": "#7e7e7e",
+				"marker-size": "medium",
+				"marker-symbol": "circle"
+				},
+				"geometry": {
+				"coordinates": [
+					11.332658,
+					44.490105
+				],
+				"type": "Point"
+				},
+				"id": 43
+			},
+			{
+				"type": "Feature",
+				"properties": {
+				"name": "Chiesa ortodossa di San Basilio",
+				"marker-color": "#7e7e7e",
+				"marker-size": "medium",
+				"marker-symbol": "circle"
+				},
+				"geometry": {
+				"coordinates": [
+					11.332153,
+					44.494056
+				],
+				"type": "Point"
+				},
+				"id": 44
+			},
+			{
+				"type": "Feature",
+				"properties": {
+				"name": "Chiesa ortodossa di San Rocco",
+				"marker-color": "#7e7e7e",
+				"marker-size": "medium",
+				"marker-symbol": "circle"
+				},
+				"geometry": {
+				"coordinates": [
+					11.328473,
+					44.495440
+				],
+				"type": "Point"
+				},
+				"id": 45
+			},
+			{
+				"type": "Feature",
+				"properties": {
+				"name": "Santuario del SS. Crocefisso del Cestello",
+				"marker-color": "#7e7e7e",
+				"marker-size": "medium",
+				"marker-symbol": "circle"
+				},
+				"geometry": {
+				"coordinates": [
+					11.345382,
+					44.487993
+				],
+				"type": "Point"
+				},
+				"id": 46
+			},
+			{
+				"type": "Feature",
+				"properties": {
+				"name": "Santuario del Corpus Domini",
+				"marker-color": "#7e7e7e",
+				"marker-size": "medium",
+				"marker-symbol": "circle"
+				},
+				"geometry": {
+				"coordinates": [
+					11.339664,
+					44.489195
+				],
+				"type": "Point"
+				},
+				"id": 47
+			},
+			{
+				"type": "Feature",
+				"properties": {
+				"name": "Chiesa di San Giovanni in Monte",
+				"marker-color": "#7e7e7e",
+				"marker-size": "medium",
+				"marker-symbol": "circle",
+				"img": "Immagini opere e icone/Immagini chiese/San-Giovanni-in-Monte.jpg",
+				"link": "#Giovanni"
+				},
+				"geometry": {
+				"coordinates": [
+					11.348590,
+					44.490580
+				],
+				"type": "Point"
+				},
+				"id": 48
+			}
+			]
+		}
+			
+		
+			L.geoJSON(geojson,{
+			onEachFeature: function(feature,layer){
+				layer.bindPopup('<h4>' + feature.properties.name + '</h4>' + '<img src="' + feature.properties.img + '"style="max-height:100%; max-width:80%; display:block; margin-left:auto; margin-right:auto;"/>' + '<a href="' + feature.properties.link + '" title="Scorri alla card della chiesa" style="position:relative; top:8px;">Scorri alla card della chiesa</a>'
+				)
+			} 
+			}).addTo(map)
+        </script>
+    </body>
+    
+</html>
